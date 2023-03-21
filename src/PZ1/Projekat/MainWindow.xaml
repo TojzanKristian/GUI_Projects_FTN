@@ -1,0 +1,49 @@
+﻿<Window x:Class="Projekat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat"
+        mc:Ignorable="d"
+        Title="Login" Height="340" Width="465">
+
+    <!-- Definicija stila za dugma na stranici -->
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BorderThickness" Value="5" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" >
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="Yellow" Offset="0.0" />
+                        <GradientStop Color="Red" Offset="0.25" />
+                        <GradientStop Color="Blue" Offset="0.75" />
+                        <GradientStop Color="LimeGreen" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="Azure">
+        <!-- Labela za naslov stranice -->
+        <Label x:Name="labelNaslov" Content="LOGIN FORM" Background="YellowGreen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="430" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="32" FontWeight="DemiBold"/>
+
+        <!-- Labela za korsničko ime -->
+        <Label x:Name="labelIme" Content="Username :" HorizontalAlignment="Left" Height="28" Margin="10,80,0,0" VerticalAlignment="Top" Width="110" FontWeight="Bold"/>
+        <!-- Labela za šifru -->
+        <Label x:Name="labelPrezime" Content="Password :" HorizontalAlignment="Left" Height="28" Margin="10,136,0,0" VerticalAlignment="Top" Width="110" FontWeight="Bold"/>
+
+        <!-- TextBox za unos korsničko ime -->
+        <TextBox x:Name="textBoxIme" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="103,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" MaxLength="12" GotFocus="TextBoxIme_GotFocus" LostFocus="TextBoxIme_LostFocus" />
+        <!-- PasswordBox za unos lozinke -->
+        <PasswordBox x:Name="PassBoxPrezime" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="103,135,0,0" VerticalAlignment="Top" Width="229" MaxLength="6"/>
+
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="8" Margin="10,200,0,0" VerticalAlignment="Top" Width="430"/>
+        
+        <!-- Dugme za izlaz -->
+        <Button x:Name="buttonIzlaz" Content="Exit"  HorizontalAlignment="Left" Height="35" Margin="250,240,0,0" VerticalAlignment="Top" Width="157" Background="White" Foreground="Black" Cursor="Hand" ToolTip="Izlaz iz programa" Click="ButtonIzlaz_Click" FontWeight="Bold"/>
+        <!-- Dugme za logovanje -->
+        <Button x:Name="buttonLogovanje" Content="Log in" HorizontalAlignment="Left" Height="35" Margin="40,240,0,0" VerticalAlignment="Top" Width="157" Background="White" Foreground="Black" Click="ButtonLogovanje_Click" FontWeight="Bold"/>
+    </Grid>
+</Window>

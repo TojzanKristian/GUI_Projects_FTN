@@ -1,0 +1,103 @@
+﻿<Window x:Class="Projekat.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat"
+        mc:Ignorable="d"
+        Title="Start Page" Height="350" Width="515" Background="Azure">
+
+    <!-- Definicija stila za dugma na stranici -->
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFFFFF00"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Rectangle x:Name="BackgroundRectangle" RadiusX="10" RadiusY="10" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                            <Style TargetType="Grid">
+                                <Setter Property="Margin" Value="-5"/>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="15" ShadowDepth="0" Opacity="0.7" Color="Black"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ControlTemplate.Resources>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BackgroundRectangle" Property="Fill" Value="#FFFFFF00"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="BackgroundRectangle" Property="Fill" Value="#FF9ACD32"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="8" Margin="10,225,0,0" VerticalAlignment="Top" Width="480"/>
+
+        <!-- Labela za naslov stranice -->
+        <Label x:Name="labelNaslov" Content="Denver Nuggets" Background="YellowGreen" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="480" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="24"/>
+
+        <!-- Tabela za prikaz sadržaja -->
+        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding Igraci}" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Extended" BorderBrush="Black" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" BorderThickness="2" ColumnHeaderHeight="25" Width="460" CanUserResizeColumns="False" CanUserReorderColumns="False" Margin="0,50,10,120" SelectionChanged="DataGridIgraci_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="CheckBox" Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate x:Name="Brisanje">
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <CheckBox x:Name="cbBrisanje" IsChecked="False" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="HyperLink" Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Hyperlink NavigateUri="{Binding Url}" Click="Hyperlink_Click">
+                                    <TextBlock Text="Link" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                </Hyperlink>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Slika" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image x:Name="img" Source="{Binding Slika}" Height="50"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Datum dodavanja" Width="*" CanUserResize="False" FontSize="10" Binding="{Binding Datum}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Dugme za dodavanje igrača -->
+        <Button x:Name="buttonDodavanje" Content="Add" HorizontalAlignment="Left" Margin="50,260,0,0" VerticalAlignment="Top" Width="98" Height="28" Background="White" Foreground="Black" Click="ButtonDodavanje_Click"/>
+        <!-- Dugme za brisanje igrača -->
+        <Button x:Name="buttonObrisi" HorizontalAlignment="Left" Margin="200,260,0,0" VerticalAlignment="Top" Width="110" Height="28" Content="Delete" Background="White" Foreground="Black" Click="ButtonObrisi_Click"/>
+        <!-- Dugme za izlaz -->
+        <Button x:Name="buttonIzlaz" Content="Exit" HorizontalAlignment="Left" Height="28" Margin="360,260,0,0" VerticalAlignment="Top" Width="94" Background="White" Foreground="Black" Click="ButtonIzlaz_Click"/>
+    </Grid>
+</Window>

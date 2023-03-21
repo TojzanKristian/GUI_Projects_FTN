@@ -1,0 +1,6 @@
+C:\Users\38162\Desktop\PZ1\Projekat\Klasa\bin\Debug\Klasa.dll
+C:\Users\38162\Desktop\PZ1\Projekat\Klasa\bin\Debug\Klasa.pdb
+C:\Users\38162\Desktop\PZ1\Projekat\Klasa\obj\Debug\Klasa.csproj.AssemblyReference.cache
+C:\Users\38162\Desktop\PZ1\Projekat\Klasa\obj\Debug\Klasa.csproj.CoreCompileInputs.cache
+C:\Users\38162\Desktop\PZ1\Projekat\Klasa\obj\Debug\Klasa.dll
+C:\Users\38162\Desktop\PZ1\Projekat\Klasa\obj\Debug\Klasa.pdb
