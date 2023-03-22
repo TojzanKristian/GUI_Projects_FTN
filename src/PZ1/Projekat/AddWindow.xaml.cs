@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Xml;
 
 namespace Projekat
 {
@@ -59,6 +60,13 @@ namespace Projekat
                 Klasa.Igrac i = new Klasa.Igrac(runText.Text, tbPrezime.Text, Int64.Parse(tbVisina.Text), slika, naziv, DateTime.Now);
                 StartWindow.Igraci.Add(i);
                 DetailsWindow.DNIgraci.Add(i);
+
+                XmlTextWriter textWriter = new XmlTextWriter("C:\\igraci.xml", null);
+                textWriter.WriteStartDocument();
+                textWriter.WriteStartElement("");
+                textWriter.WriteString(i.ToString());
+                textWriter.WriteEndDocument();
+                textWriter.Close();
             }
         }
         #endregion
@@ -77,8 +85,27 @@ namespace Projekat
             }
             else
             {
-                rtbEditor.BorderBrush = Brushes.Gray;
-                rtbEditor.BorderThickness = new Thickness(2);
+                bool imeSadrziBrojeve = false;
+                foreach (char c in runText.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        imeSadrziBrojeve = true;
+                    }
+                }
+
+                if (imeSadrziBrojeve)
+                {
+                    result = false;
+                    rtbEditor.BorderBrush = Brushes.Red;
+                    rtbEditor.BorderThickness = new Thickness(3);
+                    MessageBox.Show("Greška! Ime igrača ne sme sadržati brojeve!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    rtbEditor.BorderBrush = Brushes.Black;
+                    rtbEditor.BorderThickness = new Thickness(2);
+                }
             }
 
             if (tbPrezime.Text.Trim().Equals("") || tbPrezime.Text.Trim().Equals("Unesite prezime igrača"))
@@ -90,8 +117,27 @@ namespace Projekat
             }
             else
             {
-                tbPrezime.BorderBrush = Brushes.Gray;
-                tbPrezime.BorderThickness = new Thickness(2);
+                bool prezimeSadrziBrojeve = false;
+                foreach (char c in tbPrezime.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        prezimeSadrziBrojeve = true;
+                    }
+                }
+
+                if (prezimeSadrziBrojeve)
+                {
+                    result = false;
+                    tbPrezime.BorderBrush = Brushes.Red;
+                    tbPrezime.BorderThickness = new Thickness(3);
+                    MessageBox.Show("Greška! Prezime igrača ne sme sadržati brojeve!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    tbPrezime.BorderBrush = Brushes.Black;
+                    tbPrezime.BorderThickness = new Thickness(2);
+                }
             }
 
             if (tbVisina.Text.Trim().Equals("") || tbVisina.Text.Trim().Equals("Unesite visinu igrača"))
@@ -103,7 +149,7 @@ namespace Projekat
             }
             else
             {
-                tbVisina.BorderBrush = Brushes.Gray;
+                tbVisina.BorderBrush = Brushes.Black;
                 tbVisina.BorderThickness = new Thickness(2);
             }
 
@@ -126,7 +172,7 @@ namespace Projekat
                 }
                 else
                 {
-                    tbVisina.BorderBrush = Brushes.Gray;
+                    tbVisina.BorderBrush = Brushes.Black;
                     tbVisina.BorderThickness = new Thickness(2);
                 }
             }
@@ -140,8 +186,21 @@ namespace Projekat
             }
             else
             {
-                textSlika.BorderBrush = Brushes.Gray;
+                textSlika.BorderBrush = Brushes.Black;
                 textSlika.BorderThickness = new Thickness(0);
+            }
+
+            if (dpDatum.Text.Equals("") || dpDatum.Text.Equals("Dátum kiválasztása"))
+            {
+                result = false;
+                dpDatum.BorderBrush = Brushes.Red;
+                dpDatum.BorderThickness = new Thickness(3);
+                MessageBox.Show("Greška! Datum mora biti popunjen!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                dpDatum.BorderBrush = Brushes.Black;
+                dpDatum.BorderThickness = new Thickness(2);
             }
 
             return result;
@@ -214,6 +273,7 @@ namespace Projekat
         private void DpDatum_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
             dpDatum.Text = DateTime.Now.ToString();
+            dpDatum.IsEnabled = false;
         }
         #endregion
 
@@ -318,12 +378,5 @@ namespace Projekat
             CountWordsInRTB();
         }
         #endregion
-
-        /*#region Čuvanje igrača u XML fajlu
-        public void Save(object sender, CancelEventArgs e)
-        {
-            StartWindow.serializer.SerializeObject<BindingList<Klasa.Igrac>>(StartWindow.Igraci, "igraci.xml");
-        }
-        #endregion*/
     }
 }

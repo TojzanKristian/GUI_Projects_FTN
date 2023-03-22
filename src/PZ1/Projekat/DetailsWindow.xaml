@@ -52,7 +52,7 @@
         <Label x:Name="labelNaslov" Content="Denver Nuggets" Background="YellowGreen" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="480" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="24"/>
 
         <!-- Tabela za prikaz podataka o igračima -->
-        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding DNIgraci}" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Center" Height="158" Margin="5,53,0,0" VerticalAlignment="Top" Width="450">
+        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding DNIgraci}" CanUserSortColumns="True" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Center" Height="158" Margin="5,53,0,0" VerticalAlignment="Top" Width="450">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Ime" Binding="{Binding Ime}" Width="60"/>
                 <DataGridTextColumn Header="Prezime" Binding="{Binding Prezime}" Width="60"/>

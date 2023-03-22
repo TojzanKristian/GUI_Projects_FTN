@@ -25,9 +25,10 @@ namespace Projekat
         #endregion
         public DetailsWindow()
         {
+            #region Inicijalizacija
             //DNIgraci = serializer.DeSerializeObject<BindingList<Igrac>>("igraci.xml");
-
             DataContext = this;
+            #endregion
 
             InitializeComponent();
         }

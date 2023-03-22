@@ -1,19 +1,10 @@
 ﻿using Klasa;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Projekat
 {
@@ -26,6 +17,8 @@ namespace Projekat
 
         private static BindingList<Igrac> brisanje = new BindingList<Igrac>();
         public static BindingList<Igrac> Brisanje { get => brisanje; set => brisanje = value; }
+
+        private static bool cbOznacen = false;
         #endregion
         public StartWindow()
         {
@@ -53,6 +46,7 @@ namespace Projekat
         #region Dugme za izlaz
         private void ButtonIzlaz_Click(object sender, RoutedEventArgs e)
         {
+            Save();
             this.Close();
         }
         #endregion
@@ -63,6 +57,23 @@ namespace Projekat
             for (int i = 0; i < brisanje.Count; i++)
             {
                 Igraci.Remove(brisanje[i]);
+                DetailsWindow.DNIgraci.Remove(brisanje[i]);
+            }
+
+            for (int i = 0; i < brisanje.Count; i++)
+            {
+                if (brisanje[i] != null)
+                {
+                    string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, brisanje[i].Fajl);
+                    try
+                    {
+                        File.Delete(filePath);
+                    }
+                    catch (IOException exp)
+                    {
+                        Console.WriteLine(exp.Message);
+                    }
+                }
             }
         }
         #endregion
@@ -78,7 +89,7 @@ namespace Projekat
         #region Preusmerenje na odrđenu stranicu u zavisnosti od korisnika
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-            if(Globals.Ulogovan.Equals(Globals.AdminUN))
+            if (Globals.Ulogovan.Equals(Globals.AdminUN))
             {
                 ChangeWindow ch = new ChangeWindow(dataGridIgraci.SelectedIndex);
                 ch.ShowDialog();
@@ -94,23 +105,36 @@ namespace Projekat
         #region Promena selekcije u dataGridu
         private void DataGridIgraci_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            brisanje.Add((Igrac)dataGridIgraci.SelectedItem);
-
-            for (int i = 0;i < brisanje.Count-1;i++)
+            if (cbOznacen == true)
             {
-                if(brisanje[i] != null)
-                {
-                    string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, brisanje[i].Fajl);
-                    try
-                    {
-                        File.Delete(filePath);
-                    }
-                    catch (IOException exp)
-                    {
-                        Console.WriteLine(exp.Message);
-                    }
-                }
+                brisanje.Add((Igrac)dataGridIgraci.SelectedItem);
             }
+            cbOznacen = false;
+        }
+        #endregion
+
+        #region Na dupli klik prikaže se prozor sa detaljima
+        private void DataGridIgraci_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (Globals.Ulogovan.Equals(Globals.AdminUN))
+            {
+                DetailsWindow dw = new DetailsWindow();
+                dw.ShowDialog();
+            }
+        }
+        #endregion
+
+        #region CheckBox označen
+        private void CbBrisanje_MouseEnter(object sender, MouseEventArgs e)
+        {
+            cbOznacen = true;
+        }
+        #endregion
+
+        #region Čuvanje igrača u XML fajlu
+        public void Save()
+        {
+            serializer.SerializeObject<BindingList<Klasa.Igrac>>(Igraci, "igraci.xml");
         }
         #endregion
     }

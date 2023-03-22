@@ -57,13 +57,13 @@
         <Label x:Name="labelNaslov" Content="Denver Nuggets" Background="YellowGreen" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="480" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="24"/>
 
         <!-- Tabela za prikaz sadržaja -->
-        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding Igraci}" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Extended" BorderBrush="Black" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" BorderThickness="2" ColumnHeaderHeight="25" Width="460" CanUserResizeColumns="False" CanUserReorderColumns="False" Margin="0,50,10,120" SelectionChanged="DataGridIgraci_SelectionChanged">
+        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding Igraci}" CanUserSortColumns="True" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Extended" BorderBrush="Black" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" BorderThickness="2" ColumnHeaderHeight="25" Width="460" CanUserResizeColumns="False" CanUserReorderColumns="False" Margin="0,50,10,120" SelectionChanged="DataGridIgraci_SelectionChanged" MouseDoubleClick="DataGridIgraci_MouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="CheckBox" Width="80">
                     <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate x:Name="Brisanje">
+                        <DataTemplate>
                             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <CheckBox x:Name="cbBrisanje" IsChecked="False" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                <CheckBox x:Name="cbBrisanje" IsChecked="False" VerticalAlignment="Center" HorizontalAlignment="Center" MouseEnter="CbBrisanje_MouseEnter"/>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

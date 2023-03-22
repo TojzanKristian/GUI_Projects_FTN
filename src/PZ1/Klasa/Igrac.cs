@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Klasa
 {
@@ -9,7 +10,7 @@ namespace Klasa
         private string prezime;
         private Int64 visina; 
         private string slika;
-        private string fajl = "";
+        private string fajl;
         private System.DateTime datum;
         #endregion
 
@@ -31,6 +32,13 @@ namespace Klasa
             Slika = slika;
             Fajl = fajl;
             Datum = datum;
+        }
+        #endregion
+
+        #region ToString()
+        public override string ToString()
+        {
+            return Ime + " " + Prezime + " " + Visina + " " + Datum + " " + slika + " " + Fajl +"\n";
         }
         #endregion
     }

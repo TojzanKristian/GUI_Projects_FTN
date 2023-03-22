@@ -104,7 +104,7 @@
             <StatusBar Height="30" VerticalAlignment="Bottom" Width="60" BorderThickness="3" BorderBrush="Black">
                 <TextBox Name="tbBrojReci" Width="48" Height="18" VerticalContentAlignment="Center" FontSize="11" IsReadOnly="True" HorizontalContentAlignment="Center" BorderThickness="2" BorderBrush="Black"/>
             </StatusBar>
-            <RichTextBox x:Name="rtbEditor" BorderThickness="2" SelectionChanged="RtbEditor_SelectionChanged" TextChanged="RtbEditor_TextChanged" GotFocus="RtbEditor_GotFocus" LostFocus="RtbEditor_LostFocus">
+            <RichTextBox x:Name="rtbEditor" BorderThickness="2" SelectionChanged="RtbEditor_SelectionChanged" TextChanged="RtbEditor_TextChanged" GotFocus="RtbEditor_GotFocus" LostFocus="RtbEditor_LostFocus" BorderBrush="Black">
                 <FlowDocument>
                     <Paragraph>
                         <Run Name="runText" Text="Unesite ime igrača" Foreground="Gray"/>
@@ -127,7 +127,7 @@
         <Label x:Name="lbSlika" Content="Unesite sliku:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="5" />
 
         <!-- TextBox za silku igrača -->
-        <TextBox x:Name="textSlika" Text="Slika" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" FontSize="15" Height="50" Width="220" Background="White" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2" />
+        <TextBox x:Name="textSlika" Text="Slika" HorizontalContentAlignment="Center" IsReadOnly="True" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" FontSize="15" Height="50" Width="220" Background="White" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2" />
 
         <!-- Mesto za prikaz slike igrača -->
         <Border x:Name="bSlika"  HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="180" Grid.Column="1" Grid.Row="6" Grid.RowSpan="2">
@@ -138,7 +138,7 @@
         <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="2" FontSize="15" Width="220" Height="20" Click="BtnBrowse_Click"/>
 
         <!-- Unos datuma dodavanja igrača -->
-        <DatePicker x:Name="dpDatum" BorderThickness="1" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="35" Width="220" Grid.Row="7" MouseEnter="DpDatum_MouseEnter"/>
+        <DatePicker x:Name="dpDatum" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="35" Width="220" Grid.Row="7" MouseEnter="DpDatum_MouseEnter" BorderThickness="2" BorderBrush="Black"/>
 
         <!-- Dugme za dodavanje igrača -->
         <Button x:Name="btnDodaj" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220"  Height="20" BorderBrush="Black" FontSize="15" Grid.Row="8" FontWeight="Bold" Click="BtnDodaj_Click"/>
