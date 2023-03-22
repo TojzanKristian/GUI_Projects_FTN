@@ -60,13 +60,6 @@ namespace Projekat
                 Klasa.Igrac i = new Klasa.Igrac(runText.Text, tbPrezime.Text, Int64.Parse(tbVisina.Text), slika, naziv, DateTime.Now);
                 StartWindow.Igraci.Add(i);
                 DetailsWindow.DNIgraci.Add(i);
-
-                XmlTextWriter textWriter = new XmlTextWriter("C:\\igraci.xml", null);
-                textWriter.WriteStartDocument();
-                textWriter.WriteStartElement("");
-                textWriter.WriteString(i.ToString());
-                textWriter.WriteEndDocument();
-                textWriter.Close();
             }
         }
         #endregion

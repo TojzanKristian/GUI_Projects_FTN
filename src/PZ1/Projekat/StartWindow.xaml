@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekat"
         mc:Ignorable="d"
-        Title="Start Page" Height="350" Width="515" Background="Azure">
+        Title="Start Page" Height="350" Width="515" Background="Azure" Closing="Window_Closing">
 
     <!-- Definicija stila za dugma na stranici -->
     <Window.Resources>

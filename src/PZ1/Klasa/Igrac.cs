@@ -3,6 +3,7 @@ using System.Text;
 
 namespace Klasa
 {
+    [Serializable]
     public class Igrac
     {
         #region Polja
@@ -23,7 +24,7 @@ namespace Klasa
         public System.DateTime Datum { get => datum; set => datum = value; }
         #endregion
 
-        #region Konstruktor
+        #region Konstruktori
         public Igrac(string ime, string prezime, Int64 visina, string slika, string fajl, System.DateTime datum)
         {
             Ime = ime;
@@ -32,6 +33,10 @@ namespace Klasa
             Slika = slika;
             Fajl = fajl;
             Datum = datum;
+        }
+
+        public Igrac()
+        {
         }
         #endregion
 

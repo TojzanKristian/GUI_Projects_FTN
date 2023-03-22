@@ -13,7 +13,7 @@ namespace Projekat
         #region Dodatna pola
         public static BindingList<Igrac> Igraci { get; set; }
 
-        public static readonly Klasa.DataIO serializer = new Klasa.DataIO();
+        public Klasa.DataIO serializer = new Klasa.DataIO();
 
         private static BindingList<Igrac> brisanje = new BindingList<Igrac>();
         public static BindingList<Igrac> Brisanje { get => brisanje; set => brisanje = value; }
@@ -23,7 +23,7 @@ namespace Projekat
         public StartWindow()
         {
             #region Inicijalizacija
-            //Igraci = serializer.DeSerializeObject<BindingList<Igrac>>("igraci.xml");
+            Igraci = serializer.DeSerializeObject<BindingList<Igrac>>("igraci.xml");
 
             if (Igraci == null)
             {
@@ -46,7 +46,6 @@ namespace Projekat
         #region Dugme za izlaz
         private void ButtonIzlaz_Click(object sender, RoutedEventArgs e)
         {
-            Save();
             this.Close();
         }
         #endregion
@@ -132,7 +131,7 @@ namespace Projekat
         #endregion
 
         #region Čuvanje igrača u XML fajlu
-        public void Save()
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
             serializer.SerializeObject<BindingList<Klasa.Igrac>>(Igraci, "igraci.xml");
         }
