@@ -15,7 +15,7 @@ namespace Klasa
         private System.DateTime datum;
         #endregion
 
-        #region Property
+        #region Properties
         public string Ime { get => ime; set => ime = value; }
         public string Prezime { get => prezime; set => prezime = value; }
         public Int64 Visina { get => visina; set => visina = value; }
@@ -37,13 +37,6 @@ namespace Klasa
 
         public Igrac()
         {
-        }
-        #endregion
-
-        #region ToString()
-        public override string ToString()
-        {
-            return Ime + " " + Prezime + " " + Visina + " " + Datum + " " + slika + " " + Fajl +"\n";
         }
         #endregion
     }

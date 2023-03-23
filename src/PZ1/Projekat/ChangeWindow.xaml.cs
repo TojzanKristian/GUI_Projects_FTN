@@ -71,7 +71,6 @@ namespace Projekat
         {
             this.Close();
         }
-
         #endregion
 
         #region Promena u RichTextBoxu
@@ -185,6 +184,7 @@ namespace Projekat
                 {
                     pomoc = slikaP;
                 }
+
                 StartWindow.Igraci[index] = (new Klasa.Igrac(runText.Text, tbPrezime.Text, Int64.Parse(tbVisina.Text), pomoc, fajlP, DateTime.Now));
 
                 TextRange textRange;

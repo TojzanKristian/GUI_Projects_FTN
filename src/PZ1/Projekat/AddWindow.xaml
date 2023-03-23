@@ -62,7 +62,8 @@
         </Style>
     </Window.Resources>
 
-    <Grid>
+    <Grid Background="Azure">
+        <!-- Definicija redova -->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -74,6 +75,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <!-- Definicija kolona -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -82,7 +85,7 @@
         <!-- Labela za ime igrača -->
         <Label x:Name="lbIme" Content="Ime igrača:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="1"/>
 
-        <!-- RichTextBox sa funkcionalnostima za unos ime igrača -->
+        <!-- RichTextBox sa funkcionalnostima za unos imena igrača -->
         <DockPanel HorizontalAlignment="Left" Width="300" Grid.RowSpan="3" Grid.Column="1">
             <ToolBar DockPanel.Dock="Top" BorderThickness="3" BorderBrush="Black" Height="45">
                 <ToggleButton Command="EditingCommands.ToggleBold" Name="btnBold" FontStyle="Normal" FontSize="15">
@@ -115,7 +118,7 @@
 
         <!-- Labela za prezime igrača -->
         <Label x:Name="lbPrezime" Content="Prezime igrača:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="3" />
-        <!-- TextBox za unos prezime igrača -->
+        <!-- TextBox za unos prezimena igrača -->
         <TextBox x:Name="tbPrezime" MaxLength="12" VerticalContentAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="2" FontSize="15" Grid.Column="2" Height="35" Width="220" Grid.Row="3" GotFocus="TbPrezime_GotFocus" LostFocus="TbPrezime_LostFocus" />
 
         <!-- Labela za visinu igrača -->
@@ -135,7 +138,7 @@
         </Border>
 
         <!-- Dugme za unos silke igrača -->
-        <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="2" FontSize="15" Width="220" Height="20" Click="BtnBrowse_Click"/>
+        <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="2" FontSize="15" Width="220" Height="20" Click="BtnBrowse_Click"/>
 
         <!-- Unos datuma dodavanja igrača -->
         <DatePicker x:Name="dpDatum" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="35" Width="220" Grid.Row="7" MouseEnter="DpDatum_MouseEnter" BorderThickness="2" BorderBrush="Black"/>
@@ -143,6 +146,6 @@
         <!-- Dugme za dodavanje igrača -->
         <Button x:Name="btnDodaj" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220"  Height="20" BorderBrush="Black" FontSize="15" Grid.Row="8" FontWeight="Bold" Click="BtnDodaj_Click"/>
         <!-- Dugme za izlaz -->
-        <Button x:Name="btnIzalz" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Height="20" BorderBrush="Black" FontSize="15" Grid.Column="2" Grid.Row="8" FontWeight="Bold" Click="BtnIzalz_Click"/>
+        <Button x:Name="btnIzalz" Content="Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220" Height="20" BorderBrush="Black" FontSize="15" Grid.Column="2" Grid.Row="8" FontWeight="Bold" Click="BtnIzalz_Click"/>
     </Grid>
 </Window>

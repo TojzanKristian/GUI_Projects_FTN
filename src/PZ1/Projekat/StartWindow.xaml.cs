@@ -13,7 +13,7 @@ namespace Projekat
         #region Dodatna pola
         public static BindingList<Igrac> Igraci { get; set; }
 
-        public Klasa.DataIO serializer = new Klasa.DataIO();
+        public static Klasa.DataIO serializer = new Klasa.DataIO();
 
         private static BindingList<Igrac> brisanje = new BindingList<Igrac>();
         public static BindingList<Igrac> Brisanje { get => brisanje; set => brisanje = value; }
@@ -29,6 +29,7 @@ namespace Projekat
             {
                 Igraci = new BindingList<Igrac>();
             }
+
             DataContext = this;
             #endregion
 
@@ -56,7 +57,6 @@ namespace Projekat
             for (int i = 0; i < brisanje.Count; i++)
             {
                 Igraci.Remove(brisanje[i]);
-                DetailsWindow.DNIgraci.Remove(brisanje[i]);
             }
 
             for (int i = 0; i < brisanje.Count; i++)
@@ -95,7 +95,7 @@ namespace Projekat
             }
             if (Globals.Ulogovan.Equals(Globals.PosetilacUN))
             {
-                DetailsWindow dw = new DetailsWindow();
+                DetailsWindow dw = new DetailsWindow(dataGridIgraci.SelectedIndex);
                 dw.ShowDialog();
             }
         }
@@ -112,12 +112,12 @@ namespace Projekat
         }
         #endregion
 
-        #region Na dupli klik prikaže se prozor sa detaljima
+        #region Na dupli klik admina prikaže se prozor sa detaljima
         private void DataGridIgraci_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (Globals.Ulogovan.Equals(Globals.AdminUN))
             {
-                DetailsWindow dw = new DetailsWindow();
+                DetailsWindow dw = new DetailsWindow(dataGridIgraci.SelectedIndex);
                 dw.ShowDialog();
             }
         }

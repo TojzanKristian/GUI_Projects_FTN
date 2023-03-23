@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekat"
         mc:Ignorable="d"
-        Title="ChangeWindow" Height="450" Width="630">
+        Title="ChangeWindow" Height="450" Width="630" Background="Azure">
 
     <!-- Definicija stila za dugma na stranici -->
     <Window.Resources>
@@ -41,7 +41,8 @@
         </Style>
     </Window.Resources>
 
-    <Grid>
+    <Grid Background="Azure">
+        <!-- Definicija redova -->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -53,15 +54,17 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <!-- Definicija kolona -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <!-- Labela za ime igrača -->
-        <Label x:Name="lbIme" Content="Ime igrača:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="1"/>
+        <Label x:Name="lbIme" Content="Ime igrača :" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="1"/>
 
-        <!-- RichTextBox sa funkcionalnostima za unos ime igrača -->
+        <!-- RichTextBox sa funkcionalnostima za unos imena igrača -->
         <DockPanel HorizontalAlignment="Left" Width="300" Grid.RowSpan="3" Grid.Column="1">
             <ToolBar DockPanel.Dock="Top" BorderThickness="3" BorderBrush="Black" Height="45">
                 <ToggleButton Command="EditingCommands.ToggleBold" Name="btnBold" FontStyle="Normal" FontSize="15">
@@ -93,17 +96,17 @@
         </DockPanel>
 
         <!-- Labela za prezime igrača -->
-        <Label x:Name="lbPrezime" Content="Prezime igrača:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="3" />
-        <!-- TextBox za unos prezime igrača -->
+        <Label x:Name="lbPrezime" Content="Prezime igrača :" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="3" />
+        <!-- TextBox za unos prezimena igrača -->
         <TextBox x:Name="tbPrezime" MaxLength="12" VerticalContentAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="2" FontSize="15" Grid.Column="2" Height="35" Width="220" Grid.Row="3" />
 
         <!-- Labela za visinu igrača -->
-        <Label x:Name="lbVisina" Content="Visina igrača:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="4" />
+        <Label x:Name="lbVisina" Content="Visina igrača :" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="4" />
         <!-- TextBox za unos visine igrača -->
         <TextBox x:Name="tbVisina" MaxLength="3" VerticalContentAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" BorderBrush="Black" BorderThickness="2" FontSize="15" Grid.Column="2" Height="35" Width="220" Grid.Row="4" />
 
         <!-- Labela za silku igrača -->
-        <Label x:Name="lbSlika" Content="Unesite sliku:" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="5" />
+        <Label x:Name="lbSlika" Content="Unesite sliku :" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="35" Width="220" Background="White" BorderBrush="Black" BorderThickness="2" Grid.Row="5" />
 
         <!-- TextBox za silku igrača -->
         <TextBox x:Name="textSlika" Text="Slika" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" FontSize="15" Height="50" Width="220" Background="White" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2" />
@@ -114,7 +117,7 @@
         </Border>
 
         <!-- Dugme za unos silke igrača -->
-        <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="2" FontWeight="Bold" FontSize="15" Width="220" Height="30" Click="BtnBrowse_Click"/>
+        <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="2" FontWeight="Bold" FontSize="15" Width="220" Height="30" Click="BtnBrowse_Click"/>
 
         <!-- Unos datuma dodavanja igrača -->
         <DatePicker x:Name="dpDatum" BorderThickness="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Height="35" Width="220" Grid.Row="7" MouseEnter="DpDatum_MouseEnter" BorderBrush="Black"/>
@@ -122,7 +125,6 @@
         <!-- Dugme za dodavanje igrača -->
         <Button x:Name="btnIzmeni" Content="Change" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220"  Height="30" BorderBrush="Black" FontSize="15" Grid.Row="8" FontWeight="Bold" Click="BtnIzmeni_Click"/>
         <!-- Dugme za izlaz -->
-        <Button x:Name="btnIzalz" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Height="30" BorderBrush="Black" FontSize="15" Grid.Column="2" Grid.Row="8" FontWeight="Bold" Click="BtnIzalz_Click"/>
+        <Button x:Name="btnIzalz" Content="Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220" Height="30" BorderBrush="Black" FontSize="15" Grid.Column="2" Grid.Row="8" FontWeight="Bold" Click="BtnIzalz_Click"/>
     </Grid>
-
 </Window>

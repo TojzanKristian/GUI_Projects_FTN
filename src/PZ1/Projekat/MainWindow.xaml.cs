@@ -113,8 +113,8 @@ namespace Projekat
             }
             else
             {
-                textBoxIme.BorderBrush = Brushes.Gray;
-                textBoxIme.BorderThickness = new Thickness(1);
+                textBoxIme.BorderBrush = Brushes.Black;
+                textBoxIme.BorderThickness = new Thickness(2);
             }
 
             if (PassBoxPrezime.Password.Trim().Equals(""))
@@ -126,8 +126,8 @@ namespace Projekat
             }
             else
             {
-                PassBoxPrezime.BorderBrush = Brushes.Gray;
-                PassBoxPrezime.BorderThickness = new Thickness(1);
+                PassBoxPrezime.BorderBrush = Brushes.Black;
+                PassBoxPrezime.BorderThickness = new Thickness(2);
             }
 
             if(!(textBoxIme.Text.Trim().Equals(Globals.AdminUN) && PassBoxPrezime.Password.Trim().Equals(adminPW)) && !(textBoxIme.Text.Trim().Equals(Globals.PosetilacUN) && PassBoxPrezime.Password.Trim().Equals(posetilacPW)))
@@ -144,10 +144,10 @@ namespace Projekat
             }
             else
             {
-                textBoxIme.BorderBrush = Brushes.Gray;
-                textBoxIme.BorderThickness = new Thickness(1);
-                PassBoxPrezime.BorderBrush = Brushes.Gray;
-                PassBoxPrezime.BorderThickness = new Thickness(1);
+                textBoxIme.BorderBrush = Brushes.Black;
+                textBoxIme.BorderThickness = new Thickness(2);
+                PassBoxPrezime.BorderBrush = Brushes.Black;
+                PassBoxPrezime.BorderThickness = new Thickness(2);
             }
 
             return result;

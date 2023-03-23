@@ -59,7 +59,6 @@ namespace Projekat
 
                 Klasa.Igrac i = new Klasa.Igrac(runText.Text, tbPrezime.Text, Int64.Parse(tbVisina.Text), slika, naziv, DateTime.Now);
                 StartWindow.Igraci.Add(i);
-                DetailsWindow.DNIgraci.Add(i);
             }
         }
         #endregion
@@ -249,7 +248,6 @@ namespace Projekat
                 runText.Text = "";
                 runText.Foreground = Brushes.Black;
             }
-
         }
 
         private void RtbEditor_LostFocus(object sender, RoutedEventArgs e)

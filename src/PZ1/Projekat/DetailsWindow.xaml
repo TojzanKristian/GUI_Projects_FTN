@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekat"
         mc:Ignorable="d"
-        Title="DetailsWindow" Height="350" Width="510">
+        Title="DetailsWindow" Height="350" Width="510" Background="Azure" Closing="Window_Closing">
 
     <!-- Definicija stila za dugma na stranici -->
     <Window.Resources>
@@ -33,11 +33,11 @@
                                 <Setter TargetName="border" Property="Background" Value="#C0C0C0"/>
                                 <Setter Property="Foreground" Value="#808080"/>
                                 <Setter TargetName="border" Property="Effect">
-                                <Setter.Value>
-                                    <DropShadowEffect Color="#BA55D3" Direction="270" ShadowDepth="5" BlurRadius="10"/>
-                                </Setter.Value>
-                            </Setter>
-                           </Trigger>
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#BA55D3" Direction="270" ShadowDepth="5" BlurRadius="10"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -45,19 +45,24 @@
         </Style>
     </Window.Resources>
 
-    <Grid>
+    <Grid Background="Azure">
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="8" Margin="10,225,0,0" VerticalAlignment="Top" Width="480"/>
 
         <!-- Labela za naslov stranice -->
         <Label x:Name="labelNaslov" Content="Denver Nuggets" Background="YellowGreen" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="480" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="24"/>
 
         <!-- Tabela za prikaz podataka o igračima -->
-        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding DNIgraci}" CanUserSortColumns="True" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Center" Height="158" Margin="5,53,0,0" VerticalAlignment="Top" Width="450">
+        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding DNIgraci}" Background="Aqua" CanUserSortColumns="False" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Center" Height="158" Margin="5,53,0,0" VerticalAlignment="Top" Width="450">
             <DataGrid.Columns>
+                <!-- Kolona za prikaz imena igrača -->
                 <DataGridTextColumn Header="Ime" Binding="{Binding Ime}" Width="60"/>
+                <!-- Kolona za prikaz prezimena igrača -->
                 <DataGridTextColumn Header="Prezime" Binding="{Binding Prezime}" Width="60"/>
+                <!-- Kolona za prikaz visine igrača -->
                 <DataGridTextColumn Header="Visina" Binding="{Binding Visina}" Width="50"/>
-                <DataGridTextColumn Header="Datum" Binding="{Binding Datum}" Width="140"/>
+                <!-- Kolona za prikaz datuma dodavanja -->
+                <DataGridTextColumn Header="Datum dodavanja" Binding="{Binding Datum}" Width="140"/>
+                <!-- Kolona za prikaz slike igrača -->
                 <DataGridTemplateColumn Header="Slika" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -68,7 +73,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-         <!-- Dugme za izlaz -->
-        <Button x:Name="buttonIzlaz" Content="Exit" HorizontalAlignment="Left" Height="35" Margin="195,260,0,0" VerticalAlignment="Top" Width="120" Background="White" Foreground="Yellow" Click="ButtonIzlaz_Click"/>
+        <!-- Dugme za izlaz -->
+        <Button x:Name="buttonIzlaz" Content="Exit" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Height="45" Margin="175,250,0,0" VerticalAlignment="Top" Width="150" Background="White" Foreground="Yellow" Click="ButtonIzlaz_Click"/>
     </Grid>
 </Window>

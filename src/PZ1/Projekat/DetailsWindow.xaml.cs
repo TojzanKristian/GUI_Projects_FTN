@@ -21,12 +21,13 @@ namespace Projekat
         #region Dodatna polja
         private static BindingList<Igrac> dNIgraci = new BindingList<Igrac>();
         public static BindingList<Igrac> DNIgraci { get => dNIgraci; set => dNIgraci = value; }
-        private static readonly Klasa.DataIO serializer = new Klasa.DataIO();
         #endregion
-        public DetailsWindow()
+        public DetailsWindow(int idx)
         {
             #region Inicijalizacija
-            DNIgraci = serializer.DeSerializeObject<BindingList<Igrac>>("igraci.xml");
+            Igrac igrac = StartWindow.Igraci[idx];
+            DNIgraci.Add(igrac);
+
             DataContext = this;
             #endregion
 
@@ -37,6 +38,13 @@ namespace Projekat
         private void ButtonIzlaz_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+        #endregion
+
+        #region Zatvaranje prozora
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            DNIgraci.Clear();
         }
         #endregion
     }

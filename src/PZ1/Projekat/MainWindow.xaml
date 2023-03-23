@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekat"
         mc:Ignorable="d"
-        Title="Login" Height="340" Width="465">
+        Title="Login" Height="340" Width="465" Background="Aqua">
 
     <!-- Definicija stila za dugma na stranici -->
     <Window.Resources>
@@ -25,7 +25,7 @@
         </Style>
     </Window.Resources>
 
-    <Grid Background="Azure">
+    <Grid Background="Aqua">
         <!-- Labela za naslov stranice -->
         <Label x:Name="labelNaslov" Content="LOGIN FORM" Background="YellowGreen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="430" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="32" FontWeight="DemiBold"/>
 
@@ -34,10 +34,10 @@
         <!-- Labela za šifru -->
         <Label x:Name="labelPrezime" Content="Password :" HorizontalAlignment="Left" Height="28" Margin="10,136,0,0" VerticalAlignment="Top" Width="110" FontWeight="Bold"/>
 
-        <!-- TextBox za unos korsničko ime -->
-        <TextBox x:Name="textBoxIme" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="103,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" MaxLength="12" GotFocus="TextBoxIme_GotFocus" LostFocus="TextBoxIme_LostFocus" />
+        <!-- TextBox za unos korsničkog imena -->
+        <TextBox x:Name="textBoxIme" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="103,80,0,0" BorderThickness="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" MaxLength="12" BorderBrush="Black" GotFocus="TextBoxIme_GotFocus" LostFocus="TextBoxIme_LostFocus" />
         <!-- PasswordBox za unos lozinke -->
-        <PasswordBox x:Name="PassBoxPrezime" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="103,135,0,0" VerticalAlignment="Top" Width="229" MaxLength="6"/>
+        <PasswordBox x:Name="PassBoxPrezime" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="103,135,0,0" BorderThickness="2" VerticalAlignment="Top" Width="229" MaxLength="6" BorderBrush="Black"/>
 
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="8" Margin="10,200,0,0" VerticalAlignment="Top" Width="430"/>
         
