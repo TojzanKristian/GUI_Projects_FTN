@@ -1,0 +1,290 @@
+﻿<!--Dugme koje ima žutu pozadinu i text je crne boje -->>
+<Style TargetType="Button">
+    <Setter Property="Background" Value="Yellow"/>
+    <Setter Property="Foreground" Value="Black"/>
+    <Setter Property="BorderThickness" Value="2"/>
+    <Setter Property="BorderRadius" Value="10"/>
+    <Setter Property="Padding" Value="10"/>
+</Style>
+
+
+<!--Dugme koje ima okvir sa bojama duge -->>
+<Style TargetType="Button">
+    <Setter Property="BorderThickness" Value="5" />
+    <Setter Property="Foreground" Value="Black" />
+    <Setter Property="BorderBrush" >
+        <Setter.Value>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="Yellow" Offset="0.0" />
+                <GradientStop Color="Red" Offset="0.25" />
+                <GradientStop Color="Blue" Offset="0.75" />
+                <GradientStop Color="LimeGreen" Offset="1.0" />
+            </LinearGradientBrush>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+
+<!--Dugme koje ima različite unutrašnje boje i text je žure boje -->>
+<Style TargetType="Button">
+    <Setter Property="Foreground" Value="Yellow"/>
+    <Setter Property="FontSize" Value="10"/>
+    <Setter Property="Padding" Value="10"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Button">
+                <Grid>
+                    <Border Background="#4B0082" CornerRadius="10"/>
+                    <Border Margin="5" Background="#9400D3" CornerRadius="10"/>
+                    <Border Margin="10" Background="#9932CC" CornerRadius="10"/>
+                    <Border Margin="15" Background="#BA55D3" CornerRadius="10"/>
+                    <Border Margin="20" Background="#DA70D6" CornerRadius="10"/>
+                    <Border Margin="25" Background="#EE82EE" CornerRadius="10"/>
+                    <TextBlock Text="Nesto" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                </Grid>
+            </ControlTemplate>
+         </Setter.Value>
+    </Setter>
+</Style>
+
+
+<!--Dugme koje je elipsnog oblika, zelene je boje i text je bele boje -->>
+<Style TargetType="Button">
+    <Setter Property="Background" Value="#F5A623"/>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="Padding" Value="10"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="Margin" Value="10"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Button">
+                <Border x:Name="buttonBorder" CornerRadius="20" Background="{TemplateBinding Background}">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#AA000000" Direction="320" ShadowDepth="3" Opacity="0.5"/>
+                    </Border.Effect>
+                    <Grid>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter TargetName="buttonBorder" Property="Background" Value="#D6A61A"/>
+                    </Trigger>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter TargetName="buttonBorder" Property="Background" Value="#864C9E"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+
+<!--Dugme -->>
+<Style TargetType="Button">
+    <Setter Property="Background" Value="#3498db"/>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="Padding" Value="12 6"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Button">
+                <Grid>
+                    <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}">
+                        <Border.Effect>
+                            <DropShadowEffect Color="Gray" BlurRadius="8" ShadowDepth="5" Opacity="0.6"/>
+                        </Border.Effect>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Ellipse x:Name="ellipse" StrokeThickness="4" Stroke="#3498db" Fill="Transparent" Visibility="Hidden"/>
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter TargetName="border" Property="Background" Value="#2c3e50"/>
+                        <Setter TargetName="border" Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect Color="Gray" BlurRadius="12" ShadowDepth="8" Opacity="0.8"/>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter TargetName="ellipse" Property="Visibility" Value="Visible"/>
+                    </Trigger>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter TargetName="border" Property="Background" Value="#2980b9"/>
+                        <Setter TargetName="border" Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect Color="Black" BlurRadius="4" ShadowDepth="3" Opacity="0.5"/>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter TargetName="ellipse" Property="Visibility" Value="Visible"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+
+<!--Dugme koje ima oblik elipse, bele boje je, ali menja boju kad dobije fokus i kada se stisne na njega -->>
+<Style TargetType="Button">
+    <Setter Property="Background" Value="#FFFFFF00"/>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="Padding" Value="10"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="FontSize" Value="14"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Button">
+                <Grid>
+                    <Rectangle x:Name="BackgroundRectangle" RadiusX="10" RadiusY="10" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <ControlTemplate.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="-5"/>
+                        <Setter Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect BlurRadius="15" ShadowDepth="0" Opacity="0.7" Color="Black"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ControlTemplate.Resources>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="#FFFFFF00"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BackgroundRectangle" Property="Fill" Value="#FF9ACD32"/>
+                        </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+
+<!--Dugme koje ima oblik elipse, FF32CD32 boje je, ali menja boju kad dobije fokus i kada se stisne na njega -->>
+<Style TargetType="Button">
+            <Setter Property="Background" Value=" #FF32CD32"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Rectangle x:Name="BackgroundRectangle" RadiusX="10" RadiusY="10" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                            <Grid>
+                                <Rectangle x:Name="OverlayRectangle" RadiusX="10" RadiusY="10" Fill="#FFFFA07A" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </Grid>
+                        <ControlTemplate.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                            <Style TargetType="Grid">
+                                <Setter Property="Margin" Value="-5"/>
+                                <Setter Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="0.5" Color="Black"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ControlTemplate.Resources>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BackgroundRectangle" Property="Fill">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color=" #FF9ACD32" Offset="0"/>
+                                            <GradientStop Color="#FFFFFF00" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="OverlayRectangle" Property="Opacity" Value="0.1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="BackgroundRectangle" Property="Fill" Value="#34495e"/>
+                                <Setter TargetName="OverlayRectangle" Property="Opacity" Value="0.3"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+</Style>
+
+
+<!--Dugme -->>
+<Style TargetType="Button">
+    <Setter Property="Background" Value="#4B0082"/>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="Padding" Value="10"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Button">
+                <Grid>
+                    <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="10"/>
+                    <Border Margin="2" Background="#9400D3" CornerRadius="10"/>
+                    <Border Margin="4" Background="#9932CC" CornerRadius="10"/>
+                    <Border Margin="6" Background="#BA55D3" CornerRadius="10"/>
+                    <Border Margin="8" Background="#DA70D6" CornerRadius="10"/>
+                    <Border Margin="10" Background="#EE82EE" CornerRadius="10"/>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter TargetName="border" Property="Background" Value="#9932CC"/>
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter TargetName="border" Property="Background" Value="#C0C0C0"/>
+                        <Setter Property="Foreground" Value="#808080"/>
+                        <Setter TargetName="border" Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect Color="#BA55D3" Direction="270" ShadowDepth="5" BlurRadius="10"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+
+<!--Dugme -->>
+<Style TargetType="Button">
+    <Setter Property="Background" Value="#F5A623"/>
+    <Setter Property="Foreground" Value="Blue"/>
+    <Setter Property="Padding" Value="10"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="Margin" Value="10"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Button">
+                <Border x:Name="buttonBorder" CornerRadius="20" Background="{TemplateBinding Background}">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#AA000000" Direction="320" ShadowDepth="3" Opacity="0.5"/>
+                    </Border.Effect>
+                    <Grid>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter TargetName="buttonBorder" Property="Background" Value="#D6A61A"/>
+                    </Trigger>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter TargetName="buttonBorder" Property="Background" Value="#864C9E"/>
+                        <Setter Property="Foreground" Value="Azure"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
