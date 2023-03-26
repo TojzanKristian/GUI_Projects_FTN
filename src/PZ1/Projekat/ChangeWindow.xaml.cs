@@ -62,6 +62,7 @@ namespace Projekat
                 {
                     textRange.Load(fileStream, System.Windows.DataFormats.Rtf);
                 }
+                runText.Text = textRange.Text;
             }
             #endregion
         }
@@ -185,8 +186,6 @@ namespace Projekat
                     pomoc = slikaP;
                 }
 
-                StartWindow.Igraci[index] = (new Klasa.Igrac(runText.Text, tbPrezime.Text, Int64.Parse(tbVisina.Text), pomoc, fajlP, DateTime.Now));
-
                 TextRange textRange;
                 FileStream fileStream;
                 textRange = new TextRange(rtbEditor.Document.ContentStart, rtbEditor.Document.ContentEnd);
@@ -194,6 +193,22 @@ namespace Projekat
                 textRange.Save(fileStream, DataFormats.Rtf);
                 fileStream.Close();
 
+                TextRange textR;
+                System.IO.FileStream fileS;
+
+                if (System.IO.File.Exists(fajlP))
+                {
+                    textR = new TextRange(rtbEditor.Document.ContentStart, rtbEditor.Document.ContentEnd);
+                    using (fileS = new System.IO.FileStream(fajlP, System.IO.FileMode.OpenOrCreate))
+                    {
+                        textR.Load(fileS, System.Windows.DataFormats.Rtf);
+                    }
+                    runText.Text = textR.Text;
+                }
+
+                StartWindow.Igraci[index] = (new Klasa.Igrac(runText.Text, tbPrezime.Text, Int64.Parse(tbVisina.Text), pomoc, fajlP, DateTime.Now));
+
+                pomoc = "";
                 this.Close();
             }
         }
