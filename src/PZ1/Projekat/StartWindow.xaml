@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekat"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="Start Page" Height="350" Width="515" Background="Azure" Closing="Window_Closing">
 
     <!-- Definicija stila za dugma na stranici -->
@@ -54,10 +55,10 @@
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="8" Margin="10,225,0,0" VerticalAlignment="Top" Width="480"/>
 
         <!-- Labela za naslov stranice -->
-        <Label x:Name="labelNaslov" Content="Denver Nuggets" Background="YellowGreen" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="480" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="24"/>
+        <Label x:Name="labelNaslov" Content="Denver Nuggets" Background="YellowGreen" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,4,0,10" VerticalAlignment="Top" Width="480" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="24"/>
 
         <!-- Tabela za prikaz sadržaja -->
-        <DataGrid x:Name="dataGridIgraci" Background="Aqua" ItemsSource="{Binding Igraci}" CanUserSortColumns="False" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Extended" BorderBrush="Black" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" BorderThickness="2" ColumnHeaderHeight="25" Width="460" CanUserResizeColumns="False" CanUserReorderColumns="False" Margin="0,50,10,120" SelectionChanged="DataGridIgraci_SelectionChanged" MouseDoubleClick="DataGridIgraci_MouseDoubleClick">
+        <DataGrid x:Name="dataGridIgraci" Background="Aqua" ItemsSource="{Binding Igraci}" CanUserSortColumns="False" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Extended" BorderBrush="Black" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" BorderThickness="2" ColumnHeaderHeight="25" Width="460" CanUserResizeColumns="False" CanUserReorderColumns="False" Margin="10,50,10,120" SelectionChanged="DataGridIgraci_SelectionChanged" MouseDoubleClick="DataGridIgraci_MouseDoubleClick">
             <DataGrid.Columns>
                 <!-- Kolona sa chackBoxovima -->
                 <DataGridTemplateColumn Header="CheckBox" Width="80">
@@ -98,10 +99,10 @@
         </DataGrid>
 
         <!-- Dugme za dodavanje igrača -->
-        <Button x:Name="buttonDodavanje" Content="Add" HorizontalAlignment="Left" Margin="50,260,0,0" VerticalAlignment="Top" Width="98" Height="28" Background="White" Foreground="Black" Click="ButtonDodavanje_Click"/>
+        <Button x:Name="buttonDodavanje" Content="Add" HorizontalAlignment="Left" Margin="50,260,0,15" VerticalAlignment="Top" Width="98" Height="28" Background="White" Foreground="Black" Click="ButtonDodavanje_Click"/>
         <!-- Dugme za brisanje igrača -->
-        <Button x:Name="buttonObrisi" HorizontalAlignment="Left" Margin="200,260,0,0" VerticalAlignment="Top" Width="110" Height="28" Content="Delete" Background="White" Foreground="Black" Click="ButtonObrisi_Click"/>
+        <Button x:Name="buttonObrisi" HorizontalAlignment="Left" Margin="200,260,0,15" VerticalAlignment="Top" Width="110" Height="28" Content="Delete" Background="White" Foreground="Black" Click="ButtonObrisi_Click"/>
         <!-- Dugme za izlaz -->
-        <Button x:Name="buttonIzlaz" Content="Exit" HorizontalAlignment="Left" Height="28" Margin="360,260,0,0" VerticalAlignment="Top" Width="94" Background="White" Foreground="Black" Click="ButtonIzlaz_Click"/>
+        <Button x:Name="buttonIzlaz" Content="Exit" HorizontalAlignment="Left" Height="28" Margin="360,260,0,15" VerticalAlignment="Top" Width="94" Background="White" Foreground="Black" Click="ButtonIzlaz_Click"/>
     </Grid>
 </Window>

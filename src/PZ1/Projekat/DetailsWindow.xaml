@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekat"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="DetailsWindow" Height="350" Width="510" Background="Azure" Closing="Window_Closing">
 
     <!-- Definicija stila za dugma na stranici -->
@@ -46,13 +47,13 @@
     </Window.Resources>
 
     <Grid Background="Azure">
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="8" Margin="10,225,0,0" VerticalAlignment="Top" Width="480"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="8" Margin="10,225,0,0" VerticalAlignment="Top" Width="475"/>
 
         <!-- Labela za naslov stranice -->
-        <Label x:Name="labelNaslov" Content="Denver Nuggets" Background="YellowGreen" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="480" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="24"/>
+        <Label x:Name="labelNaslov" Content="Denver Nuggets" Background="YellowGreen" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,5,0,10" VerticalAlignment="Top" Width="475" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Agency FB" FontSize="24"/>
 
         <!-- Tabela za prikaz podataka o igračima -->
-        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding DNIgraci}" Background="Aqua" CanUserSortColumns="False" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Center" Height="158" Margin="5,53,0,0" VerticalAlignment="Top" Width="450">
+        <DataGrid x:Name="dataGridIgraci" ItemsSource="{Binding DNIgraci}" Background="Aqua" CanUserSortColumns="False" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Center" Height="158" Margin="0,55,0,0" VerticalAlignment="Top" Width="450">
             <DataGrid.Columns>
                 <!-- Kolona za prikaz imena igrača -->
                 <DataGridTextColumn Header="Ime" Binding="{Binding Ime}" Width="60"/>
