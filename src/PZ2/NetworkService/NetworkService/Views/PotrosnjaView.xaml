@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="NetworkService.Views.PotrosnjaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetworkService.Views"
+             xmlns:ViewModel="clr-namespace:NetworkService.ViewModel"
+             xmlns:vml="clr-namespace:NetworkService.VML"
+
+             xmlns:data="clr-namespace:NetworkService.Model"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="400" Background="Azure">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="0" Height="130">
+            <!--Naslov-->
+            <Label Content="Network data" Background=" #FFF0E68C" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Margin="10,0,10,0"/>
+            <StackPanel Orientation="Vertical" Height="120" Width="400" Margin="5,5,5,5">
+                <!--Odabir tipa za filtriranje-->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="150">
+                    <Label Content=" Tip :" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="12" />
+                    <ComboBox x:Name="cbType" Width="110" Height="20" ItemsSource="{Binding T2Tipovi}" SelectedItem="{Binding SelektovanTipPotrosnje}"/>
+                </StackPanel>
+                <!--Unos ID-a i odabir opcije >,<, = -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="200">
+                    <Label Content=" ID : " FontSize="12" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <RadioButton x:Name="rbLessThan" Height="30" Command="{Binding LowValueCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Label Content="&lt;" Height="30" FontSize="10"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton x:Name="rbGreatThan" Height="20" Command="{Binding HighValueCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label Content="&gt;" Height="30" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <RadioButton x:Name="rbEquals" Height="30" Command="{Binding EqualValueCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label Content="="  Height="30" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="tbReadID" FontSize="12" Width="50" Height="20" Text="{Binding IdForFilterText}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDoubleClick="IdFilter_MouseDoubleClick"/>
+                </StackPanel>
+                <!--Dugme za Filtriranje i za poništavanje filtera-->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="200" >
+                    <Button x:Name="btnFilter" Content="Filter" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="80" Command="{Binding FilterCommand}" Margin="5,5,5,5"/>
+                    <Button Content="Reset" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" Height="20" Width="80" Command="{Binding CancelFilterCommand}" Margin="20,5,5,5"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <!--Tabelarni prikaz entiteta-->
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Path=Potrosnje, UpdateSourceTrigger=PropertyChanged}"  SelectedItem="{Binding SelektovanaPotrosnja}" CanUserAddRows="False" Height="200" Margin="5,5,5,5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="*" />
+                <DataGridTextColumn Header="Naziv" Binding="{Binding Naziv}" Width="*" />
+                <DataGridTextColumn Header="Vrednost" Binding="{Binding Vrednost, UpdateSourceTrigger=PropertyChanged}" Width="*" />
+                <DataGridTextColumn Header="Tip" Binding="{Binding Tip.Ime}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="2" Orientation="Vertical" Width="400" Margin="5,10,5,5">
+            <!--Naslov za dodavanje novog merenja-->
+            <Label Content="Add measurement" Width="400" Background="#FF48D1CC" FontWeight="SemiBold" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Margin="5,0,30,0"/>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Width="400" Margin="5,10,5,5">
+                <!--Polja za unos ID-a, naziva i odabir tipa-->
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="ID :" FontSize="12" Width="80" Height="15" TextAlignment="Center" Margin="5,5,5,5"/>
+                    <TextBlock Text="Naziv :" FontSize="12" Width="80" Height="15" TextAlignment="Center" Margin="5,10,5,5"/>
+                    <TextBlock Text="Tip :" FontSize="12" Width="80" Height="15" TextAlignment="Center" Margin="5,10,5,5"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBox Name="IdTb" Text="{Binding IdText, Mode=TwoWay}" Width="120" Height="20" Margin="5,5,5,5" MouseDoubleClick="IdAdd_MouseDoubleClick"/>
+                    <TextBox x:Name="NazivTb" Text="{Binding NazivText, Mode=TwoWay}" Width="120" Height="20" Margin="5,5,5,5" MouseDoubleClick="NazivAdd_MouseDoubleClick"/>
+                    <ComboBox x:Name="cbType2" ItemsSource="{Binding T2Tipovi, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelektovanTipPotrosnje2}" Text="Select option" Width="120" Height="20"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5,5,5,5">
+                    <!--Dugme za dodavanje i brisanje entiteta-->
+                    <Button x:Name="btnAdd" Content="Add" Width="80" Height="25" Command="{Binding AddCommand}" Margin="35,0,5,5"/>
+                    <Button x:Name="btnDelete" Content="Delete" Width="80" Height="25" Command="{Binding DeleteCommand}" Margin="35,20,5,5"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
