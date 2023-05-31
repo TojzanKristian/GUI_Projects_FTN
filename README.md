@@ -1,7 +1,7 @@
 # GUI_Projects_FTN
 
 _Content of the repository_ :
-1. PZ1 - first project that includes the following functionalities :
+1. PZ1 - first project, that includes the following functionalities :
     * LogIn window/page - user login, the user can be an admin or a visitor
     ![LogIn window](https://user-images.githubusercontent.com/116062572/227771835-b841f56c-2cdb-4b97-b974-f94ca5c1eaf0.png)
     * Start window/page - display of all objects in tabel with checkbox, hyperlink, image, and date of addition
@@ -12,3 +12,9 @@ _Content of the repository_ :
     ![Change window](https://user-images.githubusercontent.com/116062572/227771918-bf140d6b-a609-4d6e-a7f9-85e185c74496.png)
     * Details window/page - displaying all details about the object
     ![Details window](https://user-images.githubusercontent.com/116062572/227771934-395c10a4-75ed-437e-85ec-e4e70936d761.png)
+
+2. PZ2 - second project, that includes the following functionalities :
+    * WireFrame - https://app.uizard.io/p/4d150af5
+    * Network Data window/page - 
+    * Network View window/page - 
+    * Data chart window/page - 
