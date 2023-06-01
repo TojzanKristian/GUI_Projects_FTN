@@ -15,6 +15,10 @@ _Content of the repository_ :
 
 2. PZ2 - second project, that includes the following functionalities :
     * WireFrame - https://app.uizard.io/p/4d150af5
-    * Network Data window/page - 
-    * Network View window/page - 
-    * Data chart window/page - 
+    * Network Data window/page - initial window with the following functionalities :
+        * Menu for selecting windows and Home and Undo buttons
+        * Filtering section - possible filtering by type and depending on the value of the ID
+        * Tabular display of entities in the form of a DataGrid
+        * Section for adding a new entity - it is possible to add a new entity or select one from the table and delete it
+    * Network View window/page - displaying entities in a ListView that can be dragged onto one of the Canvases
+    * Data chart window/page - displaying measured data in the form of a chart
