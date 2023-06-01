@@ -1,12 +1,9 @@
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\NetworkService.exe.config
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\NetworkService.exe
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\NetworkService.pdb
-C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.dll
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\VirtualKeyboard.Wpf.dll
-C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.pdb
-C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe.config
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\VirtualKeyboard.Wpf.pdb
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.xml
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.xml
@@ -32,3 +29,6 @@ C:\Users\38162\Desktop\NetworkService\NetworkService\obj\Debug\NetworkService.cs
 C:\Users\38162\Desktop\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CopyComplete
 C:\Users\38162\Desktop\NetworkService\NetworkService\obj\Debug\NetworkService.exe
 C:\Users\38162\Desktop\NetworkService\NetworkService\obj\Debug\NetworkService.pdb
+C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe
+C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.pdb
+C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe.config

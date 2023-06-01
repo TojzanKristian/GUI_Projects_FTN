@@ -44,7 +44,7 @@
             </StackPanel>
         </StackPanel>
         <!--Tabelarni prikaz entiteta-->
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Path=Potrosnje, UpdateSourceTrigger=PropertyChanged}"  SelectedItem="{Binding SelektovanaPotrosnja}" CanUserAddRows="False" Height="200" Margin="5,5,5,5">
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Path=Potrosnje, UpdateSourceTrigger=PropertyChanged}"  SelectedItem="{Binding SelektovanaPotrosnja}" CanUserAddRows="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserDeleteRows="False" VerticalScrollBarVisibility="Visible" Height="140" Margin="5,5,10,5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="*" />
                 <DataGridTextColumn Header="Naziv" Binding="{Binding Naziv}" Width="*" />

@@ -1,5 +1,6 @@
 ﻿using NetworkService.Model;
 using NetworkService.More;
+using NetworkService.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;

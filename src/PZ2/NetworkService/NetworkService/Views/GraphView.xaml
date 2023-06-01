@@ -50,11 +50,11 @@
                 <Line X1="10" Y1="100" X2="340" Y2="100" Stroke="White" StrokeThickness="1"/>
                 <Line X1="10" Y1="60" X2="340" Y2="60"   Stroke="White" StrokeThickness="1"/>
                 <!--Graf-->
-                <Line Margin="5,65,0,0" X1="36" X2="36" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FirstBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
+                <!--<Line Margin="5,65,0,0" X1="36" X2="36" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FirstBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
                 <Line Margin="5,65,0,0" X1="102" X2="102" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=SecondBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
                 <Line Margin="5,55,0,0" X1="168" X2="168" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=ThirdBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
                 <Line Margin="5,65,0,0" X1="236" X2="236" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FourthBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
-                <Line Margin="5,65,0,0" X1="300" X2="300" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FifthBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
+                <Line Margin="5,65,0,0" X1="300" X2="300" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FifthBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>-->
                 <!--limiti-->
                 <Line X1="10" Y1="265" X2="325" Y2="265" Stroke="Red" StrokeDashArray="2, 4"/>
                 <Line X1="10" Y1="225" X2="325" Y2="225" Stroke="Red" StrokeDashArray="2, 4"/>

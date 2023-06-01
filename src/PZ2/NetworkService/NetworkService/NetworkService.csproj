@@ -145,11 +145,11 @@
     <Resource Include="Pictures\intervalMeter.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MeteringSimulator - T2\MeteringSimulator\MeteringSimulator.csproj">
+    <ProjectReference Include="..\MeteringSimulator\MeteringSimulator.csproj">
       <Project>{134d87ad-f428-469f-a98e-5f007edd241b}</Project>
       <Name>MeteringSimulator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\VirtualKeyboard.Wpf-master\VirtualKeyboard.Wpf-master\VirtualKeyboard.Wpf\VirtualKeyboard.Wpf.csproj">
+    <ProjectReference Include="..\VirtualKeyboard.Wpf\VirtualKeyboard.Wpf.csproj">
       <Project>{edd5a854-abd0-4c1c-8764-56be6bf1912e}</Project>
       <Name>VirtualKeyboard.Wpf</Name>
     </ProjectReference>
