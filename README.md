@@ -24,3 +24,4 @@ _Content of the repository_ :
     * Network View window/page - displaying entities in a ListView that can be dragged onto one of the Canvases
     ![NetworkView](https://github.com/TojzanKristian/GUI_Projects_FTN/assets/116062572/0738c286-ed87-41e6-af16-1d0f5078d5c2)
     * Data chart window/page - displaying measured data in the form of a chart
+    ![DataChart](https://github.com/TojzanKristian/GUI_Projects_FTN/assets/116062572/507d7f18-5fe8-4e90-b98f-933cec23b91e)
