@@ -9,6 +9,7 @@
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="400" Background="Azure">
+    <!-- Povezivanje za ListView -->
     <UserControl.DataContext>
         <viewModel:DragandDropViewModel/>
     </UserControl.DataContext>
@@ -16,7 +17,7 @@
         <!-- Naslov -->
         <Label Content="Network View" Background=" #FFF0E68C" FontSize="18" Width="370" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Canvas.Left="8" Canvas.Top="10"/>
         <Canvas Width="400" Height="291" Canvas.Top="60" x:Name="CANVAS" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <!-- PlaceHolderi -->
+            <!-- Canvasi za smeštanje slika -->
             <Canvas AllowDrop="True" x:Name="c0" Width="50" Height="50" Canvas.Left="40" Canvas.Top="10" Background="{Binding Canvases[0].Background}">
                 <TextBlock Width="50" Text="{Binding Canvases[0].Text}" Foreground="{Binding Canvases[0].Foreground}" TextAlignment="Center" FontSize="8" Canvas.Top="40"/>
                 <i:Interaction.Triggers>
@@ -233,7 +234,7 @@
                                   CommandParameter="{Binding ElementName=c11}"/>
                 </Canvas.InputBindings>
             </Canvas>
-            <!-- Dugma za vraćanje slike -->
+            <!-- Dugma Remove za vraćanje slike u ListView -->
             <Button Command="{Binding ButtonCommand}" CommandParameter="{Binding ElementName=c0}"
                     Width="50" Height="20" Content="Remove" FontSize="8"  Canvas.Left="40" Canvas.Top="70">
             </Button>
@@ -273,8 +274,7 @@
         </Canvas>
         <!-- ListView prikaz entiteta -->
         <ListView x:Name="lvList" Width="400" Height="100" Canvas.Top="352" 
-                  ItemsSource="{Binding EntitetList}" SelectedItem="{Binding SelectedEntitet}" FontSize="15"
-                  ToolTipService.IsEnabled="{Binding ToolTipsBool}" ToolTip="Lista entiteta" HorizontalAlignment="Center" VerticalAlignment="Top">
+                  ItemsSource="{Binding EntitetList}" SelectedItem="{Binding SelectedEntitet}" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged" >
                     <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}" CommandParameter="{Binding ElementName=lvList}" />

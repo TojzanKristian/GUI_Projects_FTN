@@ -10,13 +10,13 @@ namespace NetworkService
     public class MainWindowViewModel : BindableBase
     {
         // Pomoćna polja
-        public MyICommand<string> NavCommand { get; private set; }
-        private readonly PotrosnjaViewModel potrosnjaViewModel = new PotrosnjaViewModel();
-        private readonly DragandDropViewModel networkViewModel = new DragandDropViewModel();
-        private readonly GraphViewModel graphViewModel = new GraphViewModel();
-        private BindableBase currentViewModel;
-        private readonly List<string> UndoDestinations = new List<string>();
-        public MyICommand UndoCommand { get; set; }
+        public MyICommand<string> NavCommand { get; private set; } // Komanda za Meni
+        private readonly PotrosnjaViewModel potrosnjaViewModel = new PotrosnjaViewModel(); // pomoćna promenljiva za prikaz potrošnji
+        private readonly DragandDropViewModel networkViewModel = new DragandDropViewModel(); // pomoćna promenljiva za Canvas prikaz
+        private readonly GraphViewModel graphViewModel = new GraphViewModel(); // pomoćna promenljiva za prikaz grafikona
+        private BindableBase currentViewModel; // promeljiva koja prikazuje odabran prozor iz Menia
+        private readonly List<string> UndoDestinations = new List<string>(); // pomoćna lista za Undo komandu
+        public MyICommand UndoCommand { get; set; } // Undo komanda
 
         // Konstruktor
         public MainWindowViewModel()
@@ -56,7 +56,7 @@ namespace NetworkService
             }
         }
 
-        // Funkcija za promenu prozora sa Undo dugmetom
+        // Funkcija za promenu prozora za Undo dugme
         private void OnUndoNav()
         {
             if (UndoDestinations.Count > 1)

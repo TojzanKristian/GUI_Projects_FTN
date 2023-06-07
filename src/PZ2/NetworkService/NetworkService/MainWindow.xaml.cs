@@ -13,13 +13,11 @@ namespace NetworkService
 {
     public partial class MainWindow : Window
     {
-        //private readonly int count = PotrosnjaViewModel.Potrosnje.Count();
+        private static ObservableCollection<T2_PotrosnjaStruje> ListObj { get; set; }
         private int id;
         private double value;
         private bool file = false;
         private readonly Uri path = new Uri("LogFile.txt", UriKind.Relative);
-
-        private static ObservableCollection<T2_PotrosnjaStruje> ListObj { get; set; }
 
         public MainWindow()
         {
@@ -66,15 +64,15 @@ namespace NetworkService
                             Console.WriteLine(incomming); //Na primer: "Objekat_1:272"
                             string[] split = incomming.Split('_', ':');
                             int index = Int32.Parse(split[1]);
-                            if (PotrosnjaViewModel.Potrosnje.Count > index)
+                            if (PotrosnjaViewModel.Potrosnje.Count > 0)
                                 id = PotrosnjaViewModel.Potrosnje[index].Id;
-                            else
-                                id = -1;
+
                             value = double.Parse(split[2]);
                             T2_PotrosnjaStruje v = new T2_PotrosnjaStruje(id);
                             if (id != -1)
                             {
                                 PotrosnjaViewModel.Potrosnje[index].Vrednost = value;
+                                DragandDropViewModel.UpdateList(PotrosnjaViewModel.Potrosnje[index]);
                                 UpisUFajl();
                             }
                             //################ IMPLEMENTACIJA ####################
@@ -89,6 +87,8 @@ namespace NetworkService
             listeningThread.IsBackground = true;
             listeningThread.Start();
         }
+
+        // Funkcija koja upisuje podatke u 'LogFile.txt'
         private void UpisUFajl()
         {
             if (!file)

@@ -6,7 +6,6 @@
              xmlns:local="clr-namespace:NetworkService.Views"
              xmlns:ViewModel="clr-namespace:NetworkService.ViewModel"
              xmlns:vml="clr-namespace:NetworkService.VML"
-
              xmlns:data="clr-namespace:NetworkService.Model"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="400" Background="Azure">
@@ -25,7 +24,7 @@
                     <Label Content=" Tip :" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="12" />
                     <ComboBox x:Name="cbType" Width="110" Height="20" ItemsSource="{Binding T2Tipovi}" SelectedItem="{Binding SelektovanTipPotrosnje}"/>
                 </StackPanel>
-                <!-- Unos ID-a i odabir opcije >,<, = -->
+                <!-- Unos ID-a i odabir opcije > , < , = -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="200">
                     <Label Content=" ID : " FontSize="12" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <RadioButton x:Name="rbLessThan" Height="30" Command="{Binding LowValueCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
@@ -36,7 +35,7 @@
                     <Label Content="="  Height="30" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <TextBox x:Name="tbReadID" FontSize="12" Width="50" Height="20" Text="{Binding IdForFilterText}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDoubleClick="IdFilter_MouseDoubleClick"/>
                 </StackPanel>
-                <!-- Dugme za Filtriranje i za poništavanje filtera -->
+                <!-- Dugme za filtriranje i za poništavanje filtera -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="200" >
                     <Button x:Name="btnFilter" Content="Filter" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="80" Command="{Binding FilterCommand}" Margin="5,5,5,5"/>
                     <Button Content="Reset" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" Height="20" Width="80" Command="{Binding CancelFilterCommand}" Margin="20,5,5,5"/>
@@ -56,7 +55,7 @@
             <!-- Naslov za dodavanje novog merenja -->
             <Label Content="Add measurement" Width="400" Background="#FF48D1CC" FontWeight="SemiBold" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Margin="5,0,30,0"/>
             <StackPanel Grid.Row="2" Orientation="Horizontal" Width="400" Margin="5,10,5,5">
-                <!--Polja za unos ID-a, naziva i odabir tipa-->
+                <!-- Polja za unos ID-a, naziva i odabir tipa -->
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="ID :" FontSize="12" Width="80" Height="15" TextAlignment="Center" Margin="5,5,5,5"/>
                     <TextBlock Text="Naziv :" FontSize="12" Width="80" Height="15" TextAlignment="Center" Margin="5,10,5,5"/>

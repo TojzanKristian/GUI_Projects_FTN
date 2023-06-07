@@ -8,9 +8,11 @@
         xmlns:viewModel="clr-namespace:NetworkService.ViewModel"
         ResizeMode="NoResize"
         Title="" Height="640" Width="400">
-    <Window.DataContext>
+    <!-- Povezivanje listi za MainWindow -->
+        <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
+    <!-- Definicija prozora koji se koriste na mestu CurrentViewModela -->
     <Window.Resources>
         <DataTemplate DataType="{x:Type viewModel:PotrosnjaViewModel}">
             <views:PotrosnjaView/>
@@ -46,7 +48,7 @@
                 <RowDefinition Height="450"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <!-- Preikaz određenog pogleda -->
+            <!-- Preikaz određenog pogleda/prozora -->
             <ContentControl Grid.Row="0" Content="{Binding CurrentViewModel}"/>
             <!-- Dugma Home i Undo -->
             <StackPanel Orientation="Horizontal" Grid.Row="1">

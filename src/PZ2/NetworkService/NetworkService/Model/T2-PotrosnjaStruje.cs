@@ -85,7 +85,6 @@ namespace NetworkService.Model
                 {
                     this.vrednost = value;
                     RaisePropertyChanged("Vrednost");
-                    ViewModel.GraphViewModel.ElementHeights.FirstBindingPoint = ViewModel.GraphViewModel.CalculateElementHeight(value, Id);
                 }
             }
         }
@@ -98,7 +97,7 @@ namespace NetworkService.Model
         }
         #endregion
 
-        #region Ispis u listviewu
+        #region Ispis u ListViewu
         public override string ToString()
         {
             return "Id : " + Id + " , naziv : " + Naziv + " , tip : " + Tip.Ime;

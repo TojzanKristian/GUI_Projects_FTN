@@ -1,4 +1,1 @@
-Date Time:	2023. 06. 06. 21:25:36	Object_1	Value:	2,10350434823125
-Date Time:	2023. 06. 06. 21:25:41	Object_1	Value:	1,69055895464521
-Date Time:	2023. 06. 06. 21:25:45	Object_1	Value:	0,661394020165966
-Date Time:	2023. 06. 06. 21:25:51	Object_1	Value:	4,95422430909435
+

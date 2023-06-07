@@ -59,10 +59,11 @@ namespace NetworkService.Model
 
         public bool Uslov()
         {
-            if (Entitet.Tip != null)
+            if (Entitet.Vrednost < 0.34 || Entitet.Vrednost > 2.73)
             {
                 return false;
             }
+
             return true;
         }
 

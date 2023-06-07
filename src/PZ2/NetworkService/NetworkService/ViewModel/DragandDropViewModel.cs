@@ -1,6 +1,5 @@
 ﻿using NetworkService.Model;
 using NetworkService.More;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,27 +9,24 @@ namespace NetworkService.ViewModel
     public class DragandDropViewModel : BindableBase
     {
         // Pomoćna polja
-        public static ObservableCollection<T2_PotrosnjaStruje> EntitetList { get; set; } //Lista entiteta u koju dodajem one koje su u tabeli na prvom prozoru
-        public static ObservableCollection<CanvasInfo> Canvases { get; set; } //Kanvas na slici da bude ono ao greska i 
-        public static ObservableCollection<Model.Line> Lines { get; set; } // Linije
-        public MyICommand<ListView> SelectionChangedCommand { get; set; }
-        public MyICommand MouseLeftButtonUpCommand { get; set; }
-        public MyICommand<Canvas> ButtonCommand { get; set; }
-        public MyICommand<Canvas> DragOverCommand { get; set; }
-        public MyICommand<Canvas> DropCommand { get; set; }
-        public MyICommand<Canvas> MouseLeftButtonDownCommand { get; set; }
-        public MyICommand AutoPlaceCommand { get; set; }
-        public MyICommand HelpCommand { get; set; }
+        public static ObservableCollection<T2_PotrosnjaStruje> EntitetList { get; set; } // pomoćna lista entiteta u koju dodajem one koje su u tabeli na prvom prozoru
+        public static ObservableCollection<CanvasInfo> Canvases { get; set; } // canvas koji se koristi za crtanje linija
+        public static ObservableCollection<Model.Line> Lines { get; set; } // Linije koje se iscrtavaju između slika
+        public MyICommand<ListView> SelectionChangedCommand { get; set; } // Komanda koja reaguje na izmenu
+        public MyICommand MouseLeftButtonUpCommand { get; set; } // Komanda koja reaguje na levi klik
+        public MyICommand<Canvas> ButtonCommand { get; set; } // Koamnda koja vraća slike u ListView
+        public MyICommand<Canvas> DragOverCommand { get; set; } // Komanda za pomeranje slika iz Canvasa u Canvas
+        public MyICommand<Canvas> DropCommand { get; set; } // Komanda za prebacivanje slike iz ListViewa u Canvas
+        public MyICommand<Canvas> MouseLeftButtonDownCommand { get; set; } // Koamnda koja reaguje na puštanje levog klika
 
-        bool dragging = false;
-
-        T2_PotrosnjaStruje selectedEntitet;
-
-        CanvasInfo currentCanvas;
+        private bool dragging = false; // pomoćno polje da Drag&Drop
+        private T2_PotrosnjaStruje selectedEntitet; // selektovan entitet u ListViewu
+        private CanvasInfo currentCanvas; // pomoćno polje za trenutni Canvas
 
         // Funkcija za uklanjanje linija
         public static void RemoveFromList(T2_PotrosnjaStruje e)
         {
+            // ažuriranje liste ako dođe do promene na prvom prozoru 
             foreach (T2_PotrosnjaStruje entitet in EntitetList)
             {
                 if (entitet.Id == e.Id)
@@ -40,6 +36,7 @@ namespace NetworkService.ViewModel
                 }
             }
 
+            // uklanjanje i linija vezanih za taj objekat
             for (int i = 0; i < 12; i++)
             {
                 if (Canvases[i].Entitet.Id == e.Id)
@@ -210,7 +207,7 @@ namespace NetworkService.ViewModel
                 obj.AllowDrop = false;
         }
 
-        // Funkcija koja reaguje na poštanje levog klika
+        // Funkcija koja reaguje na puštanje levog klika
         private void MouseLeftButtonUp()
         {
             SelectedEntitet = null;
@@ -245,7 +242,7 @@ namespace NetworkService.ViewModel
                 }
             }
         }
-        
+
         // Uklanjanje slike sa Canvasa
         private void ButtonCommandFreeing(Canvas obj)
         {

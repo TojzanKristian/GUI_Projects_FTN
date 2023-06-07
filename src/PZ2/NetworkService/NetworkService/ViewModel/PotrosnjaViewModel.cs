@@ -13,11 +13,11 @@ namespace NetworkService.ViewModel
     class PotrosnjaViewModel : BindableBase
     {
         // Definicija listi koji nam trebaju za rad
-        public static List<string> T2Tipovi { get; set; } = new List<string> { "Interval Meter", "Smart Meter" };
-        private ObservableCollection<T2_PotrosnjaStruje> FilterPotrosnje { get; set; } = new ObservableCollection<T2_PotrosnjaStruje>();
-        public static ObservableCollection<T2_PotrosnjaStruje> Potrosnje { get; set; } = new ObservableCollection<T2_PotrosnjaStruje>();
-        public static ObservableCollection<T2_PotrosnjaStruje> PotrosnjeCopy { get; set; } = new ObservableCollection<T2_PotrosnjaStruje>();
-        public ObservableCollection<Tip> Tipovi_Potrosnje { get; set; }
+        public static List<string> T2Tipovi { get; set; } = new List<string> { "Interval Meter", "Smart Meter" }; // za prikaz Tipova u ComboBoxovima
+        private ObservableCollection<T2_PotrosnjaStruje> FilterPotrosnje { get; set; } = new ObservableCollection<T2_PotrosnjaStruje>(); // pomoćna lista za filtriranje
+        public static ObservableCollection<T2_PotrosnjaStruje> Potrosnje { get; set; } = new ObservableCollection<T2_PotrosnjaStruje>(); // lista koja se prikazuje u DataGridu
+        public static ObservableCollection<T2_PotrosnjaStruje> PotrosnjeCopy { get; set; } = new ObservableCollection<T2_PotrosnjaStruje>(); // pomoćna lista
+        public ObservableCollection<Tip> Tipovi_Potrosnje { get; set; } // pomoćna lista za izabrane Tipove
 
         // Pomoćna polja za funkcionisanje
         private string selektovanTipPotrosnje = string.Empty; // Za selekciju Tipa za filtriranje
