@@ -28,10 +28,10 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <!--Naslov-->
+        <!-- Naslov -->
         <Label Grid.Row="0" Background="AntiqueWhite" Width="400" Content="NetworkService" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="25" Margin="10,5,10,5"/>
         <DockPanel Grid.Row="1" Margin="10">
-            <!--Meni-->
+            <!-- Meni -->
             <Menu Background="Chartreuse" DockPanel.Dock="Top">
                 <MenuItem Header="Network Data" Margin="20,8,5,5" VerticalAlignment="Center" HorizontalAlignment="Left" Command="{Binding NavCommand}"
                           CommandParameter="Network Data"/>
@@ -46,12 +46,12 @@
                 <RowDefinition Height="450"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <!--Preikaz određenog pogleda-->
+            <!-- Preikaz određenog pogleda -->
             <ContentControl Grid.Row="0" Content="{Binding CurrentViewModel}"/>
-            <!--Dugma Home i Undo-->
+            <!-- Dugma Home i Undo -->
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <Button x:Name="btnHome" Command="{Binding NavCommand}" CommandParameter="Network Data" Content="Home" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Width="100" Margin="80,5,5,5"/>
-                <Button x:Name="btnUndo" Content="Undo" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Width="100" Margin="30,5,5,5"/>
+                <Button x:Name="btnUndo" Command="{Binding UndoCommand}" Content="Undo" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Width="100" Margin="30,5,5,5"/>
             </StackPanel>
         </Grid>
     </Grid>

@@ -14,3 +14,35 @@ C:\Users\38162\Desktop\NetworkService\MeteringSimulator\obj\Debug\MeteringSimula
 C:\Users\38162\Desktop\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.CoreCompileInputs.cache
 C:\Users\38162\Desktop\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.exe
 C:\Users\38162\Desktop\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.pdb
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\bin\Debug\MeteringSimulator.exe.config
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\bin\Debug\MeteringSimulator.exe
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\bin\Debug\MeteringSimulator.pdb
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.AssemblyReference.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.SuggestedBindingRedirects.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MainWindow.g.cs
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\App.g.cs
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator_MarkupCompile.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator_MarkupCompile.lref
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MainWindow.baml
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.g.resources
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.Properties.Resources.resources
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.GenerateResource.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.CoreCompileInputs.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.exe
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.pdb
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\bin\Debug\MeteringSimulator.exe.config
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\bin\Debug\MeteringSimulator.exe
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\bin\Debug\MeteringSimulator.pdb
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.AssemblyReference.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.SuggestedBindingRedirects.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MainWindow.g.cs
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\App.g.cs
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator_MarkupCompile.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator_MarkupCompile.lref
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MainWindow.baml
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.g.resources
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.Properties.Resources.resources
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.GenerateResource.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.csproj.CoreCompileInputs.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.exe
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\MeteringSimulator\obj\Debug\MeteringSimulator.pdb

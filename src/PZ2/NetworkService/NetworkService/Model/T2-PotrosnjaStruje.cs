@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Threading;
-using System.Xml.Linq;
 
 namespace NetworkService.Model
 {
@@ -36,7 +34,7 @@ namespace NetworkService.Model
         {
             this.id = p.Id;
             this.Naziv = p.Naziv;
-            this.vrednost =(double)p.vrednost;
+            this.vrednost = (double)p.vrednost;
             this.Tip = p.Tip;
         }
         #endregion
@@ -77,6 +75,7 @@ namespace NetworkService.Model
                 RaisePropertyChanged("Tip");
             }
         }
+
         public double Vrednost
         {
             get { return vrednost; }
@@ -86,7 +85,7 @@ namespace NetworkService.Model
                 {
                     this.vrednost = value;
                     RaisePropertyChanged("Vrednost");
-                    ViewModel.GraphViewModel.ElementHeights.FirstBindingPoint = ViewModel.GraphViewModel.CalculateElementHeight();
+                    ViewModel.GraphViewModel.ElementHeights.FirstBindingPoint = ViewModel.GraphViewModel.CalculateElementHeight(value, Id);
                 }
             }
         }
@@ -95,10 +94,14 @@ namespace NetworkService.Model
         #region Promena svojstva
         private void RaisePropertyChanged(string property)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
+        #endregion
+
+        #region Ispis u listviewu
+        public override string ToString()
+        {
+            return "Id : " + Id + " , naziv : " + Naziv + " , tip : " + Tip.Ime;
         }
         #endregion
     }

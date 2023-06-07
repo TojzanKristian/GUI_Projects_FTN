@@ -32,3 +32,71 @@ C:\Users\38162\Desktop\NetworkService\NetworkService\obj\Debug\NetworkService.pd
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.pdb
 C:\Users\38162\Desktop\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe.config
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\NetworkService.exe.config
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\NetworkService.exe
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\NetworkService.pdb
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\VirtualKeyboard.Wpf.dll
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\MeteringSimulator.pdb
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe.config
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\VirtualKeyboard.Wpf.pdb
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.AssemblyReference.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.SuggestedBindingRedirects.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\MainWindow.g.cs
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\Views\DragAndDropView.g.cs
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\Views\GraphView.g.cs
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\Views\PotrosnjaView.g.cs
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\App.g.cs
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.lref
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\App.baml
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\MainWindow.baml
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\Views\DragAndDropView.baml
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\Views\GraphView.baml
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\Views\PotrosnjaView.baml
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.g.resources
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.Properties.Resources.resources
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.GenerateResource.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CoreCompileInputs.cache
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CopyComplete
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.exe
+C:\Users\38162\Desktop\Inženjerstvo upotrebljivosti u infrastrukturnim sistemima\Vežbe\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.pdb
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\NetworkService.exe.config
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\NetworkService.exe
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\NetworkService.pdb
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\VirtualKeyboard.Wpf.dll
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\MeteringSimulator.pdb
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\MeteringSimulator.exe.config
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\VirtualKeyboard.Wpf.pdb
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.AssemblyReference.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.SuggestedBindingRedirects.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\MainWindow.g.cs
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\Views\DragAndDropView.g.cs
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\Views\GraphView.g.cs
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\Views\PotrosnjaView.g.cs
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\App.g.cs
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService_MarkupCompile.lref
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\App.baml
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\MainWindow.baml
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\Views\DragAndDropView.baml
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\Views\GraphView.baml
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\Views\PotrosnjaView.baml
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.g.resources
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.Properties.Resources.resources
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.GenerateResource.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CoreCompileInputs.cache
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.csproj.CopyComplete
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.exe
+C:\Users\38162\Documents\GitHub\GUI_Projects_FTN\src\PZ2\NetworkService\NetworkService\obj\Debug\NetworkService.pdb

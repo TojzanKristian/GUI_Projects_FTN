@@ -3,6 +3,9 @@ using NetworkService.More;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Windows;
 
 namespace NetworkService.ViewModel
@@ -46,10 +49,6 @@ namespace NetworkService.ViewModel
             CancelFilterCommand = new MyICommand(OnCancel, CanCancel);
             AddCommand = new MyICommand(OnAdd, CanAdd);
             DeleteCommand = new MyICommand(OnDelete, CanDelete);
-
-            Tipovi_Potrosnje = new ObservableCollection<Tip>();
-            Tipovi_Potrosnje.Add(DodavanjeSlike.tipovi_potrosnje[0]);
-            Tipovi_Potrosnje.Add(DodavanjeSlike.tipovi_potrosnje[1]);
         }
 
         // Svojstvo za selektovan tip potrošnje kod filtriranja
@@ -161,7 +160,7 @@ namespace NetworkService.ViewModel
         // Dodavanje entiteta
         private void OnAdd()
         {
-            int tempID = 0;
+            int tempID;
             try
             {
                 tempID = Int32.Parse(IdText);
@@ -195,15 +194,18 @@ namespace NetworkService.ViewModel
             double randomNum = random.NextDouble() * (2.73 - 0.34) + 0.34;
             double roundedNum = Math.Round(randomNum, 2);
             Model.Tip temp;
+            string solutionPath = GetSolutionPath();
             if (selektovanTipPotrosnje2.Equals("Interval Meter"))
             {
-                temp = new Model.Tip(SelektovanTipPotrosnje2, "C:/Users/38162/Desktop/NetworkService/NetworkService/Pictures/intervalMeter.jpg");
+
+                temp = new Model.Tip(SelektovanTipPotrosnje2, solutionPath + "/NetworkService\\Pictures\\intervalMeter.jpg");
             }
             else
             {
-                temp = new Model.Tip(SelektovanTipPotrosnje2, "C:/Users/38162/Desktop/NetworkService/NetworkService/Pictures/smartMeter.jpg");
+                temp = new Model.Tip(SelektovanTipPotrosnje2, solutionPath + "/NetworkService\\Pictures\\smartMeter.jpg");
             }
             Potrosnje.Add(new T2_PotrosnjaStruje { Id = tempID, Naziv = NazivText, Vrednost = roundedNum, Tip = temp });
+            DragandDropViewModel.EntitetList.Add(new T2_PotrosnjaStruje { Id = tempID, Naziv = NazivText, Vrednost = roundedNum, Tip = temp });
         }
 
         // Funkcija za postavljanje rezima < za filtriranje
@@ -262,11 +264,11 @@ namespace NetworkService.ViewModel
                 }
             }
 
-            foreach(T2_PotrosnjaStruje p in Potrosnje)
+            foreach (T2_PotrosnjaStruje p in Potrosnje)
             {
                 PotrosnjeCopy.Add(p);
             }
-            
+
             List<T2_PotrosnjaStruje> filteredList = new List<T2_PotrosnjaStruje>();
 
             foreach (T2_PotrosnjaStruje entity in Potrosnje)
@@ -382,6 +384,23 @@ namespace NetworkService.ViewModel
             OnPropertyChanged("Potrosnje");
             filtercan = false;
             CancelFilterCommand.RaiseCanExecuteChanged();
+        }
+
+        // Funkcija koja određuje putanju do slika
+        private string GetSolutionPath()
+        {
+            string currentAssemblyLocation = Assembly.GetEntryAssembly().Location;
+            string solutionPath = Path.GetDirectoryName(currentAssemblyLocation);
+
+            while (!Directory.GetFiles(solutionPath, "*.sln").Any())
+            {
+                solutionPath = Path.GetDirectoryName(solutionPath);
+                if (string.IsNullOrEmpty(solutionPath))
+                {
+                    return null;
+                }
+            }
+            return solutionPath;
         }
     }
 }

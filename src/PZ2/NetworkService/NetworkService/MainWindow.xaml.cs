@@ -1,6 +1,5 @@
 ﻿using NetworkService.Model;
 using NetworkService.ViewModel;
-using NetworkService.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -14,12 +13,11 @@ namespace NetworkService
 {
     public partial class MainWindow : Window
     {
-        private int count = PotrosnjaViewModel.Potrosnje.Count();
+        //private readonly int count = PotrosnjaViewModel.Potrosnje.Count();
         private int id;
         private double value;
         private bool file = false;
-        //private string path = "pack://application:,,,/LogFile.txt";
-        private Uri path = new Uri("LogFile.txt", UriKind.Relative);
+        private readonly Uri path = new Uri("LogFile.txt", UriKind.Relative);
 
         private static ObservableCollection<T2_PotrosnjaStruje> ListObj { get; set; }
 
@@ -27,10 +25,10 @@ namespace NetworkService
         {
             InitializeComponent();
             ListObj = new ObservableCollection<T2_PotrosnjaStruje>();
-            createListener(); //Povezivanje sa serverskom aplikacijom
+            CreateListener(); //Povezivanje sa serverskom aplikacijom
         }
 
-        private void createListener()
+        private void CreateListener()
         {
             var tcp = new TcpListener(IPAddress.Any, 25565);
             tcp.Start();

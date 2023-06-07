@@ -16,14 +16,12 @@ namespace NetworkService.VML
             return (bool)obj.GetValue(AutoHookedUpViewModelProperty);
         }
 
-        public static void SetAutoHookedUpViewModel(DependencyObject obj,
-            bool value)
+        public static void SetAutoHookedUpViewModel(DependencyObject obj, bool value)
         {
             obj.SetValue(AutoHookedUpViewModelProperty, value);
         }
 
-        private static void AutoHookedUpViewModelChanged(DependencyObject d,
-            DependencyPropertyChangedEventArgs e)
+        private static void AutoHookedUpViewModelChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (DesignerProperties.GetIsInDesignMode(d))
             {

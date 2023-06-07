@@ -61,8 +61,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\DodavanjeSlike.cs" />
+    <Compile Include="Model\CanvasInfo.cs" />
     <Compile Include="Model\GraphUpdater.cs" />
+    <Compile Include="Model\Line.cs" />
+    <Compile Include="Model\StaticData.cs" />
     <Compile Include="Model\T2-PotrosnjaStruje.cs" />
     <Compile Include="Model\Tip.cs" />
     <Compile Include="Model\ZaCanvas.cs" />

@@ -9,13 +9,32 @@
              vml:ViewModelLocator.AutoHookedUpViewModel="True"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="400" Background="Azure">
+    <UserControl.Resources>
+        <Style x:Key="HideIfZero" TargetType="{x:Type Line}">
+            <Style.Triggers>
+                <Trigger Property="Y2" Value="0">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <viewModel:GraphViewModel/>
+    </UserControl.DataContext>
+
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding ShowCommand}"/>
+    </UserControl.InputBindings>
+
     <Grid>
-        <!--Naslov-->
+        <!-- Naslov -->
         <Label  Width="400" Background="#FFF0E68C" Content="Data Chart" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,5,10,5"/>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="300"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -23,7 +42,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <!--y vrednosti-->
+            <!-- y vrednosti -->
             <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right">
                 <TextBlock Text="2,73" Margin="5,35,5,5"/>
                 <TextBlock Text="2,5" Margin="5,18,5,5"/>
@@ -33,7 +52,7 @@
                 <TextBlock Text="0,5" Margin="5,18,5,5"/>
                 <TextBlock Text="0,34" Margin="5,18,5,5"/>
             </StackPanel>
-            <!--x vrednosti-->
+            <!-- x vrednosti -->
             <StackPanel Margin="0 0 0 0" Orientation="Horizontal" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Left" Text="1st"/>
                 <TextBlock Text="2nd" Margin="50 0 0 0"/>
@@ -42,20 +61,20 @@
                 <TextBlock Text="5th" Margin="50 0 0 0"/>
             </StackPanel>
             <Canvas Grid.Column="1" Grid.Row="1" Width="350" Height="270" Background="Transparent" HorizontalAlignment="Left" Margin="0,5,5,5">
-                <!--referentne linije-->
+                <!-- referentne linije -->
                 <Line X1="10" Y1="260" X2="340" Y2="260" Stroke="White" StrokeThickness="2"/>
                 <Line X1="10" Y1="220" X2="340" Y2="220" Stroke="White" StrokeThickness="1"/>
                 <Line X1="10" Y1="180" X2="340" Y2="180" Stroke="White" StrokeThickness="1"/>
                 <Line X1="10" Y1="140" X2="340" Y2="140" Stroke="White" StrokeThickness="1"/>
                 <Line X1="10" Y1="100" X2="340" Y2="100" Stroke="White" StrokeThickness="1"/>
                 <Line X1="10" Y1="60" X2="340" Y2="60"   Stroke="White" StrokeThickness="1"/>
-                <!--Graf-->
-                <!--<Line Margin="5,65,0,0" X1="36" X2="36" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FirstBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
-                <Line Margin="5,65,0,0" X1="102" X2="102" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=SecondBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
-                <Line Margin="5,55,0,0" X1="168" X2="168" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=ThirdBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
-                <Line Margin="5,65,0,0" X1="236" X2="236" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FourthBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>
-                <Line Margin="5,65,0,0" X1="300" X2="300" Y1="200" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FifthBindingPoint}" StrokeThickness="10" Stroke="Gray" Style="{StaticResource HideIfZero}"/>-->
-                <!--limiti-->
+                <!-- iscrtavanje grafova -->
+                <Line X1="36" X2="36" Y1="265" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FirstBindingPoint, UpdateSourceTrigger=PropertyChanged}" StrokeThickness="10" Stroke="Blue" Style="{StaticResource HideIfZero}"/>
+                <Line X1="102" X2="102" Y1="265" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=SecondBindingPoint, UpdateSourceTrigger=PropertyChanged}" StrokeThickness="10" Stroke="Blue" Style="{StaticResource HideIfZero}"/>
+                <Line X1="168" X2="168" Y1="265" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=ThirdBindingPoint, UpdateSourceTrigger=PropertyChanged}" StrokeThickness="10" Stroke="Red" Style="{StaticResource HideIfZero}"/>
+                <Line X1="236" X2="236" Y1="265" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FourthBindingPoint, UpdateSourceTrigger=PropertyChanged}" StrokeThickness="10" Stroke="Blue" Style="{StaticResource HideIfZero}"/>
+                <Line X1="300" X2="300" Y1="265" Y2="{Binding Source={x:Static viewModel:GraphViewModel.ElementHeights}, Path=FifthBindingPoint, UpdateSourceTrigger=PropertyChanged}" StrokeThickness="10" Stroke="Red" Style="{StaticResource HideIfZero}"/>
+                <!-- limiti -->
                 <Line X1="10" Y1="265" X2="325" Y2="265" Stroke="Red" StrokeDashArray="2, 4"/>
                 <Line X1="10" Y1="225" X2="325" Y2="225" Stroke="Red" StrokeDashArray="2, 4"/>
                 <Line X1="10" Y1="185" X2="325" Y2="185" Stroke="Red" StrokeDashArray="2, 4"/>
@@ -64,6 +83,12 @@
                 <Line X1="10" Y1="68" X2="325" Y2="68" Stroke="Red" StrokeDashArray="2, 4"/>
                 <Line X1="10" Y1="30" X2="325" Y2="30" Stroke="Red" StrokeDashArray="2, 4"/>
             </Canvas>
+            <!-- Labela za ispis ID -->
+             <Label Content="Select entity:" FontSize="12" Height="30" Grid.Row="3" Margin="10,0,280,20" Grid.Column="1" RenderTransformOrigin="0.612,0.533"/>
+            <!-- ComboBox za odabir ID-a -->
+            <ComboBox ItemsSource="{Binding ComboBoxData}" SelectedValue="{Binding SelektovanID, UpdateSourceTrigger=PropertyChanged}" Width="110" Height="30" Grid.Row="3" Margin="85,0,160,20" Grid.Column="1" RenderTransformOrigin="0.479,-0.543"/>
+            <!-- Dugme za potvrdu -->
+            <Button Content="Show" Command="{Binding ShowCommand}" HorizontalAlignment="Left" Height="20" Width="80" Grid.Row="3" Grid.Column="1" Margin="218,5,0,25"/>
         </Grid>
     </Grid>
 </UserControl>
