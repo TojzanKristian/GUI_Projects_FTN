@@ -89,6 +89,7 @@ namespace NetworkService
             if (PotrosnjaViewModel.Potrosnje.Count > 0)
             {
                 PotrosnjaViewModel.Potrosnje.RemoveAt(PotrosnjaViewModel.Potrosnje.Count - 1);
+                DragandDropViewModel.EntitetList.RemoveAt(DragandDropViewModel.EntitetList.Count - 1);
             }
         }
     }

@@ -86,7 +86,7 @@
             <!-- Labela za ispis ID -->
              <Label Content="Select entity:" FontSize="12" Height="30" Grid.Row="3" Margin="10,0,280,20" Grid.Column="1" RenderTransformOrigin="0.612,0.533"/>
             <!-- ComboBox za odabir ID-a -->
-            <ComboBox ItemsSource="{Binding ComboBoxData}" SelectedValue="{Binding SelektovanID, UpdateSourceTrigger=PropertyChanged}" Width="110" Height="30" Grid.Row="3" Margin="85,0,160,20" Grid.Column="1" RenderTransformOrigin="0.479,-0.543"/>
+            <ComboBox ItemsSource="{Binding ComboBoxData}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectedValue="{Binding SelektovanID, UpdateSourceTrigger=PropertyChanged}" Width="110" Height="30" Grid.Row="3" Margin="85,0,160,20" Grid.Column="1" RenderTransformOrigin="0.479,-0.543"/>
             <!-- Dugme za potvrdu -->
             <Button Content="Show" Command="{Binding ShowCommand}" HorizontalAlignment="Left" Height="20" Width="80" Grid.Row="3" Grid.Column="1" Margin="218,5,0,25"/>
         </Grid>

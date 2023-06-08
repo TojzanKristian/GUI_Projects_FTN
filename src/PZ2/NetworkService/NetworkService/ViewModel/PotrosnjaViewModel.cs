@@ -144,6 +144,7 @@ namespace NetworkService.ViewModel
         // Brisanje entiteta iz DataGrida
         private void OnDelete()
         {
+            DragandDropViewModel.RemoveFromList(SelektovanaPotrosnja);
             Potrosnje.Remove(SelektovanaPotrosnja);
         }
 
