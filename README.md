@@ -21,6 +21,7 @@ _Content of the repository_ :
         * Tabular display of entities in the form of a DataGrid
         * Section for adding a new entity - it is possible to add a new entity or select one from the table and delete it
         ![NetworkData](https://github.com/TojzanKristian/GUI_Projects_FTN/assets/116062572/5d465e9f-7ba8-49ad-a3e5-4195130c5a0c)
+        ![VirtualKeyboard](https://github.com/TojzanKristian/GUI_Projects_FTN/assets/116062572/6fa9a69b-7368-476f-83f9-660ebc9dc5f3)
     * Network View window/page - displaying entities in a ListView that can be dragged onto one of the Canvases
     ![NetworkView](https://github.com/TojzanKristian/GUI_Projects_FTN/assets/116062572/0738c286-ed87-41e6-af16-1d0f5078d5c2)
     * Data chart window/page - displaying measured data in the form of a chart
