@@ -1,1 +1,26 @@
-
+Date Time:	2023. 06. 08. 0:46:15	Object_1	Value:	2,59783474533252
+Date Time:	2023. 06. 08. 0:46:18	Object_4	Value:	3,80729170427066
+Date Time:	2023. 06. 08. 0:46:25	Object_3	Value:	5,26869245933774
+Date Time:	2023. 06. 08. 0:46:29	Object_3	Value:	0,970451364158863
+Date Time:	2023. 06. 08. 0:46:34	Object_3	Value:	2,46767800506096
+Date Time:	2023. 06. 08. 0:46:40	Object_3	Value:	4,71330307761361
+Date Time:	2023. 06. 08. 0:46:47	Object_1	Value:	1,24125580968859
+Date Time:	2023. 06. 08. 0:46:52	Object_4	Value:	1,72658579262746
+Date Time:	2023. 06. 08. 0:46:59	Object_1	Value:	3,20611437941255
+Date Time:	2023. 06. 08. 0:47:05	Object_2	Value:	5,43361162024718
+Date Time:	2023. 06. 08. 0:47:08	Object_1	Value:	4,48181230377025
+Date Time:	2023. 06. 08. 0:47:12	Object_1	Value:	3,35672414196968
+Date Time:	2023. 06. 08. 0:47:18	Object_1	Value:	3,72843284347022
+Date Time:	2023. 06. 08. 0:47:25	Object_4	Value:	0,561853311626172
+Date Time:	2023. 06. 08. 0:47:29	Object_4	Value:	0,89159250335842
+Date Time:	2023. 06. 08. 0:47:35	Object_3	Value:	2,4303588764278
+Date Time:	2023. 06. 08. 0:47:42	Object_2	Value:	2,91611863696767
+Date Time:	2023. 06. 08. 0:47:48	Object_3	Value:	2,00628883025902
+Date Time:	2023. 06. 08. 0:47:54	Object_1	Value:	4,06049722577003
+Date Time:	2023. 06. 08. 0:48:01	Object_2	Value:	5,02501356771449
+Date Time:	2023. 06. 08. 0:48:06	Object_4	Value:	3,65412523371825
+Date Time:	2023. 06. 08. 0:48:09	Object_2	Value:	3,79201797080786
+Date Time:	2023. 06. 08. 0:48:14	Object_4	Value:	4,87015559419065
+Date Time:	2023. 06. 08. 0:48:20	Object_4	Value:	1,05110085801738
+Date Time:	2023. 06. 08. 0:48:25	Object_3	Value:	2,24285976283851
+Date Time:	2023. 06. 08. 0:48:29	Object_2	Value:	2,26713121848979

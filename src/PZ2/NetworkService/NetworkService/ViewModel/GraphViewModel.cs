@@ -34,12 +34,14 @@ namespace NetworkService.ViewModel
             }
 
             List<double> doubles = LoadLastFiveUpdates(SelektovanID.ToString());
-
-            ElementHeights.FirstBindingPoint = (200 - doubles[0]) * randomNums[0];
-            ElementHeights.SecondBindingPoint = (200 - doubles[1]) * randomNums[1];
-            ElementHeights.ThirdBindingPoint = (200 - doubles[2]) * randomNums[2];
-            ElementHeights.FourthBindingPoint = (200 - doubles[3]) * randomNums[3];
-            ElementHeights.FifthBindingPoint = (200 - doubles[4]) * randomNums[4];
+            if (doubles != null)
+            {
+                ElementHeights.FirstBindingPoint = (200 - doubles[0]) * randomNums[0];
+                ElementHeights.SecondBindingPoint = (200 - doubles[1]) * randomNums[1];
+                ElementHeights.ThirdBindingPoint = (200 - doubles[2]) * randomNums[2];
+                ElementHeights.FourthBindingPoint = (200 - doubles[3]) * randomNums[3];
+                ElementHeights.FifthBindingPoint = (200 - doubles[4]) * randomNums[4];
+            }
         }
 
         // Promena u ComboBoxu
@@ -68,8 +70,9 @@ namespace NetworkService.ViewModel
 
             List<double> lastFiveUpdates = new List<double>();
 
-            for (int i = 0; i < 5; i++)
+            for (int i = lines.Length - 1; i > 0; i--)
             {
+                int temp = 0;
                 string line = lines[i];
 
                 // preuzimanje IDa
@@ -81,7 +84,10 @@ namespace NetworkService.ViewModel
                 int endIndex = line.Length;
                 string val = line.Substring(startIndex, endIndex - startIndex).Trim();
 
-                if (id.Contains(selectedId) && lastFiveUpdates.Count < 5)
+                int br = int.Parse(selectedId);
+                br--;
+
+                if (id.Contains(br.ToString()) && lastFiveUpdates.Count < 5)
                 {
                     double newV = double.Parse(val);
                     if (newV > 0.34 && newV < 2.73)
@@ -92,6 +98,11 @@ namespace NetworkService.ViewModel
                     {
                         lastFiveUpdates.Add(0);
                     }
+                }
+
+                if (temp == 5)
+                {
+                    break;
                 }
             }
 
